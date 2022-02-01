@@ -2755,6 +2755,9 @@ void Iniciar_LCD(void);
 void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
+void set_cursor(char a, char b);
+void shift_right(void);
+void shift_left(void);
 # 36 "LAB2.c" 2
 # 48 "LAB2.c"
 void setup(void);
@@ -2770,7 +2773,10 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 
 void main(void) {
-
+    Iniciar_LCD();
+    const char msg[] = "Hola mundo!";
+    Limpiar_pantallaLCD();
+    Escribir_stringLCD(msg);
     while(1){
 
     }

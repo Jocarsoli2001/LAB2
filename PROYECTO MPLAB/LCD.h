@@ -45,7 +45,7 @@
 // Direcciones de pines
 #define LCD_E_direc TRISC1           // Dirección de memoria del pin Enable
 #define LCD_RS_direc TRISC0          // Dirección de memoria del pin RS
-#define LCD_datos   TRISB            // Dirección de memoria del data bus
+#define LCD_datos   TRISD            // Dirección de memoria del data bus
 
 
 //-----------------------Variables utilizadas---------------------------------
@@ -58,6 +58,9 @@ void Iniciar_LCD(void);
 void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
+void set_cursor(char a, char b);
+void shift_right(void);
+void shift_left(void);
 
 #endif	/* ADC7seg_H */
 

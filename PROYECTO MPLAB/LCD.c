@@ -38,7 +38,7 @@ void Iniciar_LCD(void){
     LCD_datos = 0;
     
     Escribir_comandoLCD(0x38);
-    Escribir_comandoLCD(0x0c);
+    Escribir_comandoLCD(0x0C);
     Escribir_comandoLCD(0x01);
     Escribir_comandoLCD(0x06);
 }
@@ -51,5 +51,12 @@ void Escribir_stringLCD(const char *d){
 
 void Limpiar_pantallaLCD(void){
     Escribir_comandoLCD(0x01);
-    __delay_ms(2);
+    __delay_ms(4);
+}
+
+void set_cursor(char a, char b){
+    if(a == 1){
+        
+    }
+    
 }

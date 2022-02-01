@@ -58,7 +58,10 @@ void __interrupt() isr(void){
 
 //----------------------Main Loop--------------------------------
 void main(void) {
-    
+    Iniciar_LCD();                // Initialize LCD in 8bit mode
+    const char msg[] = "Hola mundo!";
+    Limpiar_pantallaLCD();          // Clear LCD screen
+    Escribir_stringLCD(msg);  // Write Hello World on LCD
     while(1){
         
     }

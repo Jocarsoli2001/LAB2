@@ -18,9 +18,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4448
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 4448: extern volatile __bit TRISC0 __attribute__((address(0x438)));
 [v _TRISC0 `Vb ~T0 @X0 0 e@1080 ]
-"1478
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1602
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -339,13 +339,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 37:     TRISC0 = 0;
 [e = _TRISC0 -> -> 0 `i `b ]
 "38
-[; ;LCD.c: 38:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;LCD.c: 38:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "40
 [; ;LCD.c: 40:     Escribir_comandoLCD(0x38);
 [e ( _Escribir_comandoLCD (1 -> -> 56 `i `uc ]
 "41
-[; ;LCD.c: 41:     Escribir_comandoLCD(0x0c);
+[; ;LCD.c: 41:     Escribir_comandoLCD(0x0C);
 [e ( _Escribir_comandoLCD (1 -> -> 12 `i `uc ]
 "42
 [; ;LCD.c: 42:     Escribir_comandoLCD(0x01);
@@ -394,9 +394,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 53:     Escribir_comandoLCD(0x01);
 [e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
 "54
-[; ;LCD.c: 54:     _delay((unsigned long)((2)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;LCD.c: 54:     _delay((unsigned long)((4)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "55
 [; ;LCD.c: 55: }
 [e :UE 146 ]
+}
+"57
+[; ;LCD.c: 57: void set_cursor(char a, char b){
+[v _set_cursor `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _set_cursor ]
+[v _a `uc ~T0 @X0 1 r1 ]
+[v _b `uc ~T0 @X0 1 r2 ]
+[f ]
+"58
+[; ;LCD.c: 58:     if(a == 1){
+[e $ ! == -> _a `i -> 1 `i 148  ]
+{
+"60
+[; ;LCD.c: 60:     }
+}
+[e :U 148 ]
+"62
+[; ;LCD.c: 62: }
+[e :UE 147 ]
 }

@@ -2505,6 +2505,9 @@ void Iniciar_LCD(void);
 void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
+void set_cursor(char a, char b);
+void shift_right(void);
+void shift_left(void);
 # 9 "LCD.c" 2
 
 
@@ -2535,10 +2538,10 @@ void Iniciar_LCD(void){
     PORTD = 0;
     TRISC1 = 0;
     TRISC0 = 0;
-    TRISB = 0;
+    TRISD = 0;
 
     Escribir_comandoLCD(0x38);
-    Escribir_comandoLCD(0x0c);
+    Escribir_comandoLCD(0x0C);
     Escribir_comandoLCD(0x01);
     Escribir_comandoLCD(0x06);
 }
@@ -2551,5 +2554,12 @@ void Escribir_stringLCD(const char *d){
 
 void Limpiar_pantallaLCD(void){
     Escribir_comandoLCD(0x01);
-    _delay((unsigned long)((2)*(8000000/4000.0)));
+    _delay((unsigned long)((4)*(8000000/4000.0)));
+}
+
+void set_cursor(char a, char b){
+    if(a == 1){
+
+    }
+
 }
