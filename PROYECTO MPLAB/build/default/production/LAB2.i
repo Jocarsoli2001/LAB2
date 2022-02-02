@@ -2763,6 +2763,7 @@ void shift_left(void);
 void setup(void);
 void tmr0(void);
 void displays(void);
+void botones(void);
 
 
 
@@ -2774,19 +2775,16 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void main(void) {
     Iniciar_LCD();
+    Limpiar_pantallaLCD();
     while(1){
 
-        Limpiar_pantallaLCD();
-        set_cursor(1,1);
-        Escribir_stringLCD("Holas x1");
-        set_cursor(2,1);
-        Escribir_stringLCD("Holas");
-        _delay((unsigned long)((200)*(4000000/4000.0)));
-
-        Limpiar_pantallaLCD();
-        set_cursor(1,1);
-        Escribir_stringLCD("Llegue!!!");
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+        set_cursor(1,2);
+        Escribir_stringLCD("S1");
+        set_cursor(1,6);
+        Escribir_stringLCD("S2");
+        set_cursor(1,11);
+        Escribir_stringLCD("S3");
+        set_cursor(2,2);
     }
 }
 
@@ -2794,17 +2792,17 @@ void main(void) {
 void setup(void){
 
 
-    ANSEL = 0b1000000000;
+    ANSEL = 0;
     ANSELH = 0;
 
-    TRISA = 0;
-    TRISB = 0b0111;
-
+    TRISA = 0b0011;
+    TRISB = 0;
     TRISC = 0;
     TRISD = 0;
     TRISE = 0;
 
     PORTA = 0;
+    PORTB = 0;
     PORTD = 0;
     PORTC = 0;
     PORTE = 0;
@@ -2818,7 +2816,6 @@ void setup(void){
     IOCBbits.IOCB0 = 1;
     IOCBbits.IOCB1 = 1;
     INTCONbits.RBIF = 0;
-
 
 
     OSCCONbits.IRCF = 0b0110;
@@ -2860,4 +2857,15 @@ void tmr0(void){
     INTCONbits.T0IF = 0;
     TMR0 = 237;
     return;
+}
+
+void botones(void){
+    if(RA0){
+        while(RA0);
+        PORTB++;
+    }
+    else if(RA1){
+        while(RA1);
+        PORTB--;
+    }
 }

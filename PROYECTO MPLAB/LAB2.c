@@ -48,6 +48,7 @@
 void setup(void);                           // Función de setup
 void tmr0(void);                            // Función para reiniciar TMR0
 void displays(void);                        // Función para alternar valores mostrados en displays
+void botones(void);
 
 //-------------Funciones que retornan variables-----------------------
 
@@ -59,19 +60,16 @@ void __interrupt() isr(void){
 //----------------------Main Loop--------------------------------
 void main(void) {
     Iniciar_LCD();                // Initialize LCD in 8bit mode
+    Limpiar_pantallaLCD();
     while(1){
-    
-        Limpiar_pantallaLCD();
-        set_cursor(1,1);
-        Escribir_stringLCD("Holas x1");
-        set_cursor(2,1);
-        Escribir_stringLCD("Holas");
-        __delay_ms(200);
         
-        Limpiar_pantallaLCD();
-        set_cursor(1,1);
-        Escribir_stringLCD("Llegue!!!");
-        __delay_ms(200);
+        set_cursor(1,2);
+        Escribir_stringLCD("S1");
+        set_cursor(1,6);
+        Escribir_stringLCD("S2");
+        set_cursor(1,11);
+        Escribir_stringLCD("S3");
+        set_cursor(2,2);
     }
 }
 
@@ -79,17 +77,17 @@ void main(void) {
 void setup(void){
     
     //Configuración de entradas y salidas
-    ANSEL = 0b1000000000;                   // Pines 0 y 1 de PORTA como analógicos
+    ANSEL = 0;                              // Pines 0 y 1 de PORTA como analógicos
     ANSELH = 0;
     
-    TRISA = 0;                              // PORTB, bit 2 como entrada analógica
-    TRISB = 0b0111;                         // PORB, bit 0 y 1 como entrada digital por resistencia pull up
-    
+    TRISA = 0b0011;                         // PORTB, bit 2 como entrada analógica
+    TRISB = 0;                              // PORB, bit 0 y 1 como entrada digital por resistencia pull up
     TRISC = 0;                              // PORTC como salida
     TRISD = 0;                              // PORTD como salida                           
     TRISE = 0;                              // PORTE como salida
     
     PORTA = 0;                              // Limpiar PORTA
+    PORTB = 0;
     PORTD = 0;                              // Limpiar PORTD
     PORTC = 0;                              // Limpiar PORTC
     PORTE = 0;                              // Limpiar PORTE
@@ -103,7 +101,6 @@ void setup(void){
     IOCBbits.IOCB0 = 1;
     IOCBbits.IOCB1 = 1;
     INTCONbits.RBIF = 0;
-    
     
     //Configuración de oscilador
     OSCCONbits.IRCF = 0b0110;               // Oscilador a 4 MHz = 110
@@ -147,3 +144,13 @@ void tmr0(void){
     return;
 }
 
+void botones(void){
+    if(RA0){
+        while(RA0);
+        PORTB++;
+    }
+    else if(RA1){
+        while(RA1);
+        PORTB--;
+    }
+}
