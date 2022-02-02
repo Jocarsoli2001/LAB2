@@ -2774,11 +2774,19 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void main(void) {
     Iniciar_LCD();
-    const char msg[] = "Hola mundo!";
-    Limpiar_pantallaLCD();
-    Escribir_stringLCD(msg);
     while(1){
 
+        Limpiar_pantallaLCD();
+        set_cursor(1,1);
+        Escribir_stringLCD("Holas x1");
+        set_cursor(2,1);
+        Escribir_stringLCD("Holas");
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+        Limpiar_pantallaLCD();
+        set_cursor(1,1);
+        Escribir_stringLCD("Llegue!!!");
+        _delay((unsigned long)((200)*(4000000/4000.0)));
     }
 }
 

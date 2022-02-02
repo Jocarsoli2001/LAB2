@@ -56,7 +56,10 @@ void Limpiar_pantallaLCD(void){
 
 void set_cursor(char a, char b){
     if(a == 1){
-        
+        Escribir_comandoLCD(0x80 + (b-1));
+    }
+    if(a == 2){
+        Escribir_comandoLCD(0xC0 + (b-1));
     }
     
 }

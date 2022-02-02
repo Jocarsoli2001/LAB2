@@ -412,11 +412,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 58:     if(a == 1){
 [e $ ! == -> _a `i -> 1 `i 148  ]
 {
+"59
+[; ;LCD.c: 59:         Escribir_comandoLCD(0x80 + (b-1));
+[e ( _Escribir_comandoLCD (1 -> + -> 128 `i - -> _b `i -> 1 `i `uc ]
 "60
 [; ;LCD.c: 60:     }
 }
 [e :U 148 ]
+"61
+[; ;LCD.c: 61:     if(a == 2){
+[e $ ! == -> _a `i -> 2 `i 149  ]
+{
 "62
-[; ;LCD.c: 62: }
+[; ;LCD.c: 62:         Escribir_comandoLCD(0xC0 + (b-1));
+[e ( _Escribir_comandoLCD (1 -> + -> 192 `i - -> _b `i -> 1 `i `uc ]
+"63
+[; ;LCD.c: 63:     }
+}
+[e :U 149 ]
+"65
+[; ;LCD.c: 65: }
 [e :UE 147 ]
 }
