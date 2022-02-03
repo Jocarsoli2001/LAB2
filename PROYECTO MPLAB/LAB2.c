@@ -31,6 +31,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 //---------------------Librearías creadas por usuario--------------------
 #include "LCD.h"
@@ -42,7 +43,8 @@
 #define  valor_tmr0 237                    // valor_tmr0 = 237
 
 //-----------------------Variables------------------------------------
-
+int num = 0;
+char buffer[10];
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                           // Función de setup
@@ -50,26 +52,24 @@ void tmr0(void);                            // Función para reiniciar TMR0
 void displays(void);                        // Función para alternar valores mostrados en displays
 void botones(void);
 
+
 //-------------Funciones que retornan variables-----------------------
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
     
+    
 }
 
 //----------------------Main Loop--------------------------------
 void main(void) {
-    Iniciar_LCD();                // Initialize LCD in 8bit mode
+    setup();
+    Iniciar_LCD();                          // Initialize LCD in 8bit mode
     Limpiar_pantallaLCD();
+    set_cursor(1,1);
+    Escribir_stringLCD("S1");
     while(1){
         
-        set_cursor(1,2);
-        Escribir_stringLCD("S1");
-        set_cursor(1,6);
-        Escribir_stringLCD("S2");
-        set_cursor(1,11);
-        Escribir_stringLCD("S3");
-        set_cursor(2,2);
     }
 }
 
@@ -82,38 +82,14 @@ void setup(void){
     
     TRISA = 0b0011;                         // PORTB, bit 2 como entrada analógica
     TRISB = 0;                              // PORB, bit 0 y 1 como entrada digital por resistencia pull up
-    TRISC = 0;                              // PORTC como salida
-    TRISD = 0;                              // PORTD como salida                           
     TRISE = 0;                              // PORTE como salida
     
     PORTA = 0;                              // Limpiar PORTA
     PORTB = 0;
-    PORTD = 0;                              // Limpiar PORTD
-    PORTC = 0;                              // Limpiar PORTC
-    PORTE = 0;                              // Limpiar PORTE
-    
-    //Configuración de resistencias pull-up internas
-    OPTION_REGbits.nRBPU = 0;
-    WPUBbits.WPUB0 = 1;
-    WPUBbits.WPUB1 = 1;
-    
-    //Configuración de interrupt-on-change
-    IOCBbits.IOCB0 = 1;
-    IOCBbits.IOCB1 = 1;
-    INTCONbits.RBIF = 0;
     
     //Configuración de oscilador
     OSCCONbits.IRCF = 0b0110;               // Oscilador a 4 MHz = 110
     OSCCONbits.SCS = 1;
-    
-    //Configuración de TMR0
-    OPTION_REGbits.T0CS = 0;                // bit 5  TMR0 Clock Source Select bit...0 = Internal Clock (CLKO) 1 = Transition on T0CKI pin
-    OPTION_REGbits.T0SE = 0;                // bit 4 TMR0 Source Edge Select bit 0 = low/high 1 = high/low
-    OPTION_REGbits.PSA = 0;                 // bit 3  Prescaler Assignment bit...0 = Prescaler is assigned to the Timer0
-    OPTION_REGbits.PS2 = 1;                 // bits 2-0  PS2:PS0: Prescaler Rate Select bits
-    OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS0 = 1;
-    TMR0 = valor_tmr0;                      // preset for timer register
     
     //Configuración del ADC
     ADCON1bits.ADFM = 0;                    // Resultado justificado a la izquierda
@@ -126,22 +102,12 @@ void setup(void){
     __delay_us(50);
     
     //Configuración de interrupciones
-    INTCONbits.T0IF = 0;                    // Habilitada la bandera de TIMER 0      
-    INTCONbits.T0IE = 1;                    // Habilitar las interrupciones de TIMER 0
-    INTCONbits.RBIF = 0;                    // Habilitada la bandera de interrupción de puerto B
-    INTCONbits.RBIE = 1;                    // Habilitadas las interrupciones de puerto B
-    INTCONbits.GIE = 1;                     // Habilitar interrupciones globales
+    
     PIR1bits.ADIF = 0;                      // Limpiar bandera de interrupción del ADC
     PIE1bits.ADIE = 1;                      // Interrupción ADC = enabled
     INTCONbits.PEIE = 1;                    // Interrupciones periféricas activadas
-    
-    return;
-}
+    INTCONbits.GIE = 1;                     // Habilitar interrupciones globales
 
-void tmr0(void){
-    INTCONbits.T0IF = 0;                    // Limpiar bandera de TIMER 0
-    TMR0 = valor_tmr0;                      // TMR0 = 237
-    return;
 }
 
 void botones(void){

@@ -35,7 +35,10 @@
 
 //----------------------------Constantes--------------------------------------
 // Frecuencia para delay
+#ifndef _XTAL_FREQ
 #define _XTAL_FREQ 8000000
+#endif
+
 
 // Pines
 #define LCD_E  RC1                   // Pin de Enable

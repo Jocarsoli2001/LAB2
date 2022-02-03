@@ -63,3 +63,13 @@ void set_cursor(char a, char b){
     }
     
 }
+
+void shift_right(void){
+    Escribir_comandoLCD(0x01);
+    Escribir_comandoLCD(0x0C);
+}
+
+void shift_left(void){
+    Escribir_comandoLCD(0x01);
+    Escribir_comandoLCD(0x08);
+}

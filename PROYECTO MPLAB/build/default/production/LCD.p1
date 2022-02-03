@@ -434,3 +434,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 65: }
 [e :UE 147 ]
 }
+"67
+[; ;LCD.c: 67: void shift_right(void){
+[v _shift_right `(v ~T0 @X0 1 ef ]
+{
+[e :U _shift_right ]
+[f ]
+"68
+[; ;LCD.c: 68:     Escribir_comandoLCD(0x01);
+[e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
+"69
+[; ;LCD.c: 69:     Escribir_comandoLCD(0x0C);
+[e ( _Escribir_comandoLCD (1 -> -> 12 `i `uc ]
+"70
+[; ;LCD.c: 70: }
+[e :UE 150 ]
+}
+"72
+[; ;LCD.c: 72: void shift_left(void){
+[v _shift_left `(v ~T0 @X0 1 ef ]
+{
+[e :U _shift_left ]
+[f ]
+"73
+[; ;LCD.c: 73:     Escribir_comandoLCD(0x01);
+[e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
+"74
+[; ;LCD.c: 74:     Escribir_comandoLCD(0x08);
+[e ( _Escribir_comandoLCD (1 -> -> 8 `i `uc ]
+"75
+[; ;LCD.c: 75: }
+[e :UE 151 ]
+}

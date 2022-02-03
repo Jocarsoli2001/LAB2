@@ -2745,10 +2745,95 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 33 "LAB2.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
+
+
+
+
+
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+# 34 "LAB2.c" 2
+
 
 
 # 1 "./LCD.h" 1
-# 55 "./LCD.h"
+# 58 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);
@@ -2758,8 +2843,12 @@ void prender_ELCD(void);
 void set_cursor(char a, char b);
 void shift_right(void);
 void shift_left(void);
-# 36 "LAB2.c" 2
-# 48 "LAB2.c"
+# 37 "LAB2.c" 2
+# 46 "LAB2.c"
+int num = 0;
+char buffer[10];
+
+
 void setup(void);
 void tmr0(void);
 void displays(void);
@@ -2768,23 +2857,21 @@ void botones(void);
 
 
 
+
 void __attribute__((picinterrupt(("")))) isr(void){
+
 
 }
 
 
 void main(void) {
+    setup();
     Iniciar_LCD();
     Limpiar_pantallaLCD();
+    set_cursor(1,1);
+    Escribir_stringLCD("S1");
     while(1){
 
-        set_cursor(1,2);
-        Escribir_stringLCD("S1");
-        set_cursor(1,6);
-        Escribir_stringLCD("S2");
-        set_cursor(1,11);
-        Escribir_stringLCD("S3");
-        set_cursor(2,2);
     }
 }
 
@@ -2797,38 +2884,14 @@ void setup(void){
 
     TRISA = 0b0011;
     TRISB = 0;
-    TRISC = 0;
-    TRISD = 0;
     TRISE = 0;
 
     PORTA = 0;
     PORTB = 0;
-    PORTD = 0;
-    PORTC = 0;
-    PORTE = 0;
-
-
-    OPTION_REGbits.nRBPU = 0;
-    WPUBbits.WPUB0 = 1;
-    WPUBbits.WPUB1 = 1;
-
-
-    IOCBbits.IOCB0 = 1;
-    IOCBbits.IOCB1 = 1;
-    INTCONbits.RBIF = 0;
 
 
     OSCCONbits.IRCF = 0b0110;
     OSCCONbits.SCS = 1;
-
-
-    OPTION_REGbits.T0CS = 0;
-    OPTION_REGbits.T0SE = 0;
-    OPTION_REGbits.PSA = 0;
-    OPTION_REGbits.PS2 = 1;
-    OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS0 = 1;
-    TMR0 = 237;
 
 
     ADCON1bits.ADFM = 0;
@@ -2841,22 +2904,12 @@ void setup(void){
     _delay((unsigned long)((50)*(4000000/4000000.0)));
 
 
-    INTCONbits.T0IF = 0;
-    INTCONbits.T0IE = 1;
-    INTCONbits.RBIF = 0;
-    INTCONbits.RBIE = 1;
-    INTCONbits.GIE = 1;
+
     PIR1bits.ADIF = 0;
     PIE1bits.ADIE = 1;
     INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
 
-    return;
-}
-
-void tmr0(void){
-    INTCONbits.T0IF = 0;
-    TMR0 = 237;
-    return;
 }
 
 void botones(void){

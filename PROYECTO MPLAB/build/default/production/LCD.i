@@ -2498,7 +2498,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 34 "./LCD.h" 2
-# 55 "./LCD.h"
+# 58 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);
@@ -2565,4 +2565,14 @@ void set_cursor(char a, char b){
         Escribir_comandoLCD(0xC0 + (b-1));
     }
 
+}
+
+void shift_right(void){
+    Escribir_comandoLCD(0x01);
+    Escribir_comandoLCD(0x0C);
+}
+
+void shift_left(void){
+    Escribir_comandoLCD(0x01);
+    Escribir_comandoLCD(0x08);
 }
