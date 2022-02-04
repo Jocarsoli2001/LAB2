@@ -36,6 +36,7 @@
 //---------------------Librearías creadas por usuario--------------------
 #include "LCD.h"
 #include "ADC.h"
+#include "USART.h"
 
 //-----------------Definición de frecuencia de cristal---------------
 #define _XTAL_FREQ 4000000
@@ -45,14 +46,18 @@
 //-----------------------Variables------------------------------------
 char buffer1[10];
 char buffer2[10];
+char buffer3[10];
 char vol1[];
 char vol2[];
+char vol3[];
+uint8_t cont_U = 0;
 
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                                   // Función de setup
 void conversion_char(void);                         // Función para convertir valores a caracteres
 void divisor(uint8_t a, char dig[]);                // Función para dividir valores en dígitos y guardarlos en array
+void chequeo(void);                                 // Función para chequear valor recibido por USART
 
 
 //-------------Funciones que retornan variables-----------------------
@@ -62,6 +67,10 @@ void __interrupt() isr(void){
     if(PIR1bits.ADIF){                              // Interrupción de ADC
         ADC();                                      // Guarda valor de ADRESH en cont1 o cont2, dependiendo del canal seleccionado
         PIR1bits.ADIF = 0;                          // Apagar bandera de interrupción de ADC
+    }
+    
+    if(PIR1bits.RCIF){                              // Si la bandera de interrupción de recepción es 1
+        obtener_dato();                             // Guardar el valor de RCREG en variable dato
     }
     
 }
@@ -85,7 +94,11 @@ void main(void) {
         set_cursor(2,7);                            // Setear cursor en segunda línea, espacio 7
         Escribir_stringLCD(buffer2);                // Escribir valor de segundo potenciómetro
         
+        
         // ---------------Mostrar valores de USART en LCD-----------------------
+        chequeo();                                  // Chequear que tecla fue enviada al PIC por USART
+        set_cursor(2,12);                           // Setear cursor en segunda línea, espacio 9
+        Escribir_stringLCD(buffer3);                // Escribir valor de comunicación serial a LCD
         
     }
 }
@@ -109,6 +122,9 @@ void setup(void){
     OSCCONbits.IRCF = 0b0110;                       // Oscilador a 8 MHz = 111
     OSCCONbits.SCS = 1;
     
+    //Configuración de comunicación serial
+    config_USART();
+    
     //Configuración del ADC
     ADCON1bits.ADFM = 0;                            // Resultado justificado a la izquierda
     ADCON1bits.VCFG0 = 0;                           // Voltaje 0 de referencia = VSS
@@ -122,6 +138,8 @@ void setup(void){
     //Configuración de interrupciones
     PIR1bits.ADIF = 0;                              // Limpiar bandera de interrupción del ADC
     PIE1bits.ADIE = 1;                              // Interrupción ADC = enabled
+    PIR1bits.RCIF = 0;                              // Bandera de interrupción de comunicación USART activada
+    PIE1bits.RCIE = 1;                              // Interrupcciones de USART habilitadas
     INTCONbits.PEIE = 1;                            // Interrupciones periféricas activadas
     INTCONbits.GIE = 1;                             // Habilitar interrupciones globales
 
@@ -136,6 +154,7 @@ void conversion_char(void){
     
     divisor(cont2, vol2);                                            // Divide el valor de cont2 en dígitos
     sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);          //Convierte el dato cont2 a string
+
 }
 
 void divisor(uint8_t a, char dig[]){
@@ -144,4 +163,17 @@ void divisor(uint8_t a, char dig[]){
         dig[i] = b % 10;                            // array[i] = cont_vol mod 10(retornar residuo). Devuelve digito por dígito de un número decimal.
         b = (b - dig[i])/10;                        // b = valor sin último digito.
     }
+}
+
+void chequeo(void){
+    if(dato == 43){                                                  //Si se manda la tecla +, aumentar contador U            
+        cont_U++;
+    }
+    else if(dato == 45){                                             //Si se manda la tecla -, decrementar contador U
+        cont_U--;
+    }
+    
+        
+    divisor(cont_U, vol3);                                           //Dividir valor de cont_U en dígitos
+    sprintf(buffer3, "%d.%d%d", vol3[2], vol3[1], vol3[0]);          //Convierte el dato cont_U a string
 }
