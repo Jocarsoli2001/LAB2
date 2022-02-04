@@ -2873,14 +2873,18 @@ void conversion(void);
 
 char buffer1[10];
 char buffer2[10];
+char buffer3[10];
 char vol1[];
 char vol2[];
-
+char vol3[];
+uint8_t dato = 0;
+uint8_t Cont_U = 0;
 
 
 void setup(void);
 void conversion_char(void);
 void divisor(uint8_t a, char dig[]);
+void dato_recibido(void);
 
 
 
@@ -2890,6 +2894,10 @@ void __attribute__((picinterrupt(("")))) isr(void){
     if(PIR1bits.ADIF){
         ADC();
         PIR1bits.ADIF = 0;
+    }
+    if(PIR1bits.RCIF){
+        dato = RCREG;
+
     }
 
 }
@@ -2914,7 +2922,10 @@ void main(void) {
         Escribir_stringLCD(buffer2);
 
 
+        dato_recibido();
 
+        set_cursor(2,13);
+        Escribir_stringLCD(buffer3);
     }
 }
 
@@ -2950,8 +2961,25 @@ void setup(void){
 
     PIR1bits.ADIF = 0;
     PIE1bits.ADIE = 1;
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
+
+
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+
+    BAUDCTLbits.BRG16 = 0;
+
+    SPBRG = 23;
+    SPBRGH = 0;
+
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
+
+    TXSTAbits.TXEN = 1;
 
 
     Iniciar_LCD();
@@ -2972,4 +3000,16 @@ void divisor(uint8_t a, char dig[]){
         dig[i] = b % 10;
         b = (b - dig[i])/10;
     }
+}
+
+void dato_recibido(void){
+    if(dato == 75){
+        Cont_U++;
+    }
+    if(dato == 77){
+        Cont_U--;
+    }
+
+    divisor(Cont_U, vol3);
+    sprintf(buffer3, "%d.%d%d", vol3[2], vol3[1], vol3[0]);
 }

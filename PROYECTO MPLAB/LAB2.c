@@ -45,14 +45,18 @@
 //-----------------------Variables------------------------------------
 char buffer1[10];
 char buffer2[10];
+char buffer3[10];
 char vol1[];
 char vol2[];
-
+char vol3[];
+uint8_t dato = 0;
+uint8_t Cont_U = 0;
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                                   // Función de setup
 void conversion_char(void);                         // Función para convertir valores a caracteres
 void divisor(uint8_t a, char dig[]);                // Función para dividir valores en dígitos y guardarlos en array
+void dato_recibido(void);
 
 
 //-------------Funciones que retornan variables-----------------------
@@ -62,6 +66,10 @@ void __interrupt() isr(void){
     if(PIR1bits.ADIF){                              // Interrupción de ADC
         ADC();                                      // Guarda valor de ADRESH en cont1 o cont2, dependiendo del canal seleccionado
         PIR1bits.ADIF = 0;                          // Apagar bandera de interrupción de ADC
+    }
+    if(PIR1bits.RCIF){
+        dato = RCREG;
+        
     }
     
 }
@@ -86,7 +94,10 @@ void main(void) {
         Escribir_stringLCD(buffer2);                // Escribir valor de segundo potenciómetro
         
         // ---------------Mostrar valores de USART en LCD-----------------------
+        dato_recibido();
         
+        set_cursor(2,13);
+        Escribir_stringLCD(buffer3);
     }
 }
 
@@ -122,8 +133,25 @@ void setup(void){
     //Configuración de interrupciones
     PIR1bits.ADIF = 0;                              // Limpiar bandera de interrupción del ADC
     PIE1bits.ADIE = 1;                              // Interrupción ADC = enabled
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
     INTCONbits.PEIE = 1;                            // Interrupciones periféricas activadas
-    INTCONbits.GIE = 1;                             // Habilitar interrupciones globales
+    INTCONbits.GIE = 1;                             // Habilitar interrupciones globales                        // Oscilador interno
+    
+    //Configuración de TX y RX
+    TXSTAbits.SYNC = 0;                             // Transmisión asíncrona
+    TXSTAbits.BRGH = 1;                             // Baud rate a velocidad baja
+    
+    BAUDCTLbits.BRG16 = 0;                          // Baud rate de 16 bits
+    
+    SPBRG = 23;                                      // SPBRG:SPBRGH = 25
+    SPBRGH = 0;
+    
+    RCSTAbits.SPEN = 1;                             // Puertos seriales habilitados
+    RCSTAbits.RX9 = 0;                              // Recepción de datos de 8 bits 
+    RCSTAbits.CREN = 1;                             // Recepción continua habilitada
+    
+    TXSTAbits.TXEN = 1;                             // Transmisiones habilitadas
 
     //Pantalla LCD
     Iniciar_LCD();                                  // Se inicializa la LCD en 8 bits
@@ -144,4 +172,16 @@ void divisor(uint8_t a, char dig[]){
         dig[i] = b % 10;                            // array[i] = cont_vol mod 10(retornar residuo). Devuelve digito por dígito de un número decimal.
         b = (b - dig[i])/10;                        // b = valor sin último digito.
     }
+}
+
+void dato_recibido(void){
+    if(dato == 75){
+        Cont_U++;
+    }
+    if(dato == 77){
+        Cont_U--;
+    }
+    
+    divisor(Cont_U, vol3);                                             // Divide el valor de cont2 en dígitos
+    sprintf(buffer3, "%d.%d%d", vol3[2], vol3[1], vol3[0]);            //Convierte el dato cont2 a string
 }
