@@ -161,7 +161,7 @@ void setup(void){
 
     //Pantalla LCD
     Iniciar_LCD();                                  // Se inicializa la LCD en 8 bits
-    Limpiar_pantallaLCD();                          // Se limpia la pantalla LCD
+//    Limpiar_pantallaLCD();                          // Se limpia la pantalla LCD
 }
 
 void conversion_char(void){

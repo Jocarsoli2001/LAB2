@@ -2989,7 +2989,7 @@ void setup(void){
 
 
     Iniciar_LCD();
-    Limpiar_pantallaLCD();
+
 }
 
 void conversion_char(void){

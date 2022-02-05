@@ -265,14 +265,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 12:     RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
 "13
-[; ;LCD.c: 13:     _delay((unsigned long)((500)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;LCD.c: 13:     _delay((unsigned long)((4)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "14
 [; ;LCD.c: 14:     RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
 "15
-[; ;LCD.c: 15:     _delay((unsigned long)((500)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;LCD.c: 15:     _delay((unsigned long)((4)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "16
 [; ;LCD.c: 16: }
 [e :UE 138 ]
@@ -342,127 +342,148 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 38:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
 "40
-[; ;LCD.c: 40:     Escribir_comandoLCD(0x38);
-[e ( _Escribir_comandoLCD (1 -> -> 56 `i `uc ]
+[; ;LCD.c: 40:     _delay((unsigned long)((16)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 16 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "41
-[; ;LCD.c: 41:     Escribir_comandoLCD(0x0C);
-[e ( _Escribir_comandoLCD (1 -> -> 12 `i `uc ]
+[; ;LCD.c: 41:     Escribir_datosLCD(0b00110000);
+[e ( _Escribir_datosLCD (1 -> -> 48 `i `uc ]
 "42
-[; ;LCD.c: 42:     Escribir_comandoLCD(0x01);
-[e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
+[; ;LCD.c: 42:     _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "43
-[; ;LCD.c: 43:     Escribir_comandoLCD(0x06);
-[e ( _Escribir_comandoLCD (1 -> -> 6 `i `uc ]
+[; ;LCD.c: 43:     Escribir_datosLCD(0b00110000);
+[e ( _Escribir_datosLCD (1 -> -> 48 `i `uc ]
 "44
-[; ;LCD.c: 44: }
+[; ;LCD.c: 44:     _delay((unsigned long)((200)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"45
+[; ;LCD.c: 45:     Escribir_datosLCD(0b00110000);
+[e ( _Escribir_datosLCD (1 -> -> 48 `i `uc ]
+"48
+[; ;LCD.c: 48:     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"49
+[; ;LCD.c: 49:     Escribir_datosLCD(0b00111000);
+[e ( _Escribir_datosLCD (1 -> -> 56 `i `uc ]
+"50
+[; ;LCD.c: 50:     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"51
+[; ;LCD.c: 51:     Escribir_datosLCD(0b00001100);
+[e ( _Escribir_datosLCD (1 -> -> 12 `i `uc ]
+"52
+[; ;LCD.c: 52:     return;
+[e $UE 141  ]
+"53
+[; ;LCD.c: 53: }
 [e :UE 141 ]
 }
-"46
-[; ;LCD.c: 46: void Escribir_stringLCD(const char *d){
+"55
+[; ;LCD.c: 55: void Escribir_stringLCD(const char *d){
 [v _Escribir_stringLCD `(v ~T0 @X0 1 ef1`*Cuc ]
 {
 [e :U _Escribir_stringLCD ]
 [v _d `*Cuc ~T0 @X0 1 r1 ]
 [f ]
-"47
-[; ;LCD.c: 47:     while(*d){
+"56
+[; ;LCD.c: 56:     while(*d){
 [e $U 143  ]
 [e :U 144 ]
 {
-"48
-[; ;LCD.c: 48:         Escribir_datosLCD(*d++);
+"57
+[; ;LCD.c: 57:         Escribir_datosLCD(*d++);
 [e ( _Escribir_datosLCD (1 *U ++ _d * -> -> 1 `i `x -> -> # *U _d `i `x ]
-"49
-[; ;LCD.c: 49:     }
+"58
+[; ;LCD.c: 58:     }
 }
 [e :U 143 ]
-"47
-[; ;LCD.c: 47:     while(*d){
+"56
+[; ;LCD.c: 56:     while(*d){
 [e $ != -> *U _d `i -> 0 `i 144  ]
 [e :U 145 ]
-"50
-[; ;LCD.c: 50: }
+"59
+[; ;LCD.c: 59: }
 [e :UE 142 ]
 }
-"52
-[; ;LCD.c: 52: void Limpiar_pantallaLCD(void){
+"61
+[; ;LCD.c: 61: void Limpiar_pantallaLCD(void){
 [v _Limpiar_pantallaLCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _Limpiar_pantallaLCD ]
 [f ]
-"53
-[; ;LCD.c: 53:     Escribir_comandoLCD(0x01);
+"62
+[; ;LCD.c: 62:     Escribir_comandoLCD(0x01);
 [e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
-"54
-[; ;LCD.c: 54:     _delay((unsigned long)((4)*(8000000/4000.0)));
+"63
+[; ;LCD.c: 63:     _delay((unsigned long)((4)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"55
-[; ;LCD.c: 55: }
+"64
+[; ;LCD.c: 64: }
 [e :UE 146 ]
 }
-"57
-[; ;LCD.c: 57: void set_cursor(char a, char b){
+"66
+[; ;LCD.c: 66: void set_cursor(char a, char b){
 [v _set_cursor `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _set_cursor ]
 [v _a `uc ~T0 @X0 1 r1 ]
 [v _b `uc ~T0 @X0 1 r2 ]
 [f ]
-"58
-[; ;LCD.c: 58:     if(a == 1){
+"67
+[; ;LCD.c: 67:     if(a == 1){
 [e $ ! == -> _a `i -> 1 `i 148  ]
 {
-"59
-[; ;LCD.c: 59:         Escribir_comandoLCD(0x80 + (b-1));
+"68
+[; ;LCD.c: 68:         Escribir_comandoLCD(0x80 + (b-1));
 [e ( _Escribir_comandoLCD (1 -> + -> 128 `i - -> _b `i -> 1 `i `uc ]
-"60
-[; ;LCD.c: 60:     }
+"69
+[; ;LCD.c: 69:     }
 }
 [e :U 148 ]
-"61
-[; ;LCD.c: 61:     if(a == 2){
+"70
+[; ;LCD.c: 70:     if(a == 2){
 [e $ ! == -> _a `i -> 2 `i 149  ]
 {
-"62
-[; ;LCD.c: 62:         Escribir_comandoLCD(0xC0 + (b-1));
+"71
+[; ;LCD.c: 71:         Escribir_comandoLCD(0xC0 + (b-1));
 [e ( _Escribir_comandoLCD (1 -> + -> 192 `i - -> _b `i -> 1 `i `uc ]
-"63
-[; ;LCD.c: 63:     }
+"72
+[; ;LCD.c: 72:     }
 }
 [e :U 149 ]
-"65
-[; ;LCD.c: 65: }
+"74
+[; ;LCD.c: 74: }
 [e :UE 147 ]
 }
-"67
-[; ;LCD.c: 67: void shift_right(void){
+"76
+[; ;LCD.c: 76: void shift_right(void){
 [v _shift_right `(v ~T0 @X0 1 ef ]
 {
 [e :U _shift_right ]
 [f ]
-"68
-[; ;LCD.c: 68:     Escribir_comandoLCD(0x01);
+"77
+[; ;LCD.c: 77:     Escribir_comandoLCD(0x01);
 [e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
-"69
-[; ;LCD.c: 69:     Escribir_comandoLCD(0x0C);
+"78
+[; ;LCD.c: 78:     Escribir_comandoLCD(0x0C);
 [e ( _Escribir_comandoLCD (1 -> -> 12 `i `uc ]
-"70
-[; ;LCD.c: 70: }
+"79
+[; ;LCD.c: 79: }
 [e :UE 150 ]
 }
-"72
-[; ;LCD.c: 72: void shift_left(void){
+"81
+[; ;LCD.c: 81: void shift_left(void){
 [v _shift_left `(v ~T0 @X0 1 ef ]
 {
 [e :U _shift_left ]
 [f ]
-"73
-[; ;LCD.c: 73:     Escribir_comandoLCD(0x01);
+"82
+[; ;LCD.c: 82:     Escribir_comandoLCD(0x01);
 [e ( _Escribir_comandoLCD (1 -> -> 1 `i `uc ]
-"74
-[; ;LCD.c: 74:     Escribir_comandoLCD(0x08);
+"83
+[; ;LCD.c: 83:     Escribir_comandoLCD(0x08);
 [e ( _Escribir_comandoLCD (1 -> -> 8 `i `uc ]
-"75
-[; ;LCD.c: 75: }
+"84
+[; ;LCD.c: 84: }
 [e :UE 151 ]
 }

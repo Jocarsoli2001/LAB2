@@ -2513,9 +2513,9 @@ void shift_left(void);
 
 void prender_ELCD(void){
     RC1 = 1;
-    _delay((unsigned long)((500)*(8000000/4000000.0)));
+    _delay((unsigned long)((4)*(8000000/4000.0)));
     RC1 = 0;
-    _delay((unsigned long)((500)*(8000000/4000000.0)));
+    _delay((unsigned long)((4)*(8000000/4000.0)));
 }
 
 void Escribir_comandoLCD(unsigned char Comando){
@@ -2540,10 +2540,19 @@ void Iniciar_LCD(void){
     TRISC0 = 0;
     TRISD = 0;
 
-    Escribir_comandoLCD(0x38);
-    Escribir_comandoLCD(0x0C);
-    Escribir_comandoLCD(0x01);
-    Escribir_comandoLCD(0x06);
+    _delay((unsigned long)((16)*(8000000/4000.0)));
+    Escribir_datosLCD(0b00110000);
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    Escribir_datosLCD(0b00110000);
+    _delay((unsigned long)((200)*(8000000/4000000.0)));
+    Escribir_datosLCD(0b00110000);
+
+
+    _delay((unsigned long)((100)*(8000000/4000.0)));
+    Escribir_datosLCD(0b00111000);
+    _delay((unsigned long)((100)*(8000000/4000.0)));
+    Escribir_datosLCD(0b00001100);
+    return;
 }
 
 void Escribir_stringLCD(const char *d){

@@ -45,11 +45,9 @@
 [v _Escribir_datosLCD Escribir_datosLCD `(v  1 e 1 0 ]
 "32
 [v _Iniciar_LCD Iniciar_LCD `(v  1 e 1 0 ]
-"46
+"55
 [v _Escribir_stringLCD Escribir_stringLCD `(v  1 e 1 0 ]
-"52
-[v _Limpiar_pantallaLCD Limpiar_pantallaLCD `(v  1 e 1 0 ]
-"57
+"66
 [v _set_cursor set_cursor `(v  1 e 1 0 ]
 "44 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB/ADC.h
 [v _cont1 cont1 `uc  1 e 1 0 ]
@@ -255,31 +253,26 @@
 {
 "165
 } 0
-"52 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-[v _Limpiar_pantallaLCD Limpiar_pantallaLCD `(v  1 e 1 0 ]
-{
-"55
-} 0
-"32
+"32 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
 [v _Iniciar_LCD Iniciar_LCD `(v  1 e 1 0 ]
 {
-"44
+"53
 } 0
-"57
+"66
 [v _set_cursor set_cursor `(v  1 e 1 0 ]
 {
 [v set_cursor@a a `uc  1 a 1 wreg ]
 [v set_cursor@a a `uc  1 a 1 wreg ]
-[v set_cursor@b b `uc  1 p 1 0 ]
-[v set_cursor@a a `uc  1 a 1 1 ]
-"65
+[v set_cursor@b b `uc  1 p 1 1 ]
+[v set_cursor@a a `uc  1 a 1 2 ]
+"74
 } 0
 "18
 [v _Escribir_comandoLCD Escribir_comandoLCD `(v  1 e 1 0 ]
 {
 [v Escribir_comandoLCD@Comando Comando `uc  1 a 1 wreg ]
 [v Escribir_comandoLCD@Comando Comando `uc  1 a 1 wreg ]
-[v Escribir_comandoLCD@Comando Comando `uc  1 a 1 5 ]
+[v Escribir_comandoLCD@Comando Comando `uc  1 a 1 0 ]
 "23
 } 0
 "183 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
@@ -378,18 +371,18 @@
 {
 "34
 } 0
-"46 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+"55 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
 [v _Escribir_stringLCD Escribir_stringLCD `(v  1 e 1 0 ]
 {
-[v Escribir_stringLCD@d d `*.26DCuc  1 p 2 0 ]
-"50
+[v Escribir_stringLCD@d d `*.26DCuc  1 p 2 1 ]
+"59
 } 0
 "25
 [v _Escribir_datosLCD Escribir_datosLCD `(v  1 e 1 0 ]
 {
 [v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 wreg ]
 [v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 wreg ]
-[v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 5 ]
+[v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 0 ]
 "30
 } 0
 "11
