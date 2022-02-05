@@ -2833,7 +2833,7 @@ extern char * ftoa(float f, int * status);
 
 
 # 1 "./LCD.h" 1
-# 58 "./LCD.h"
+# 55 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);

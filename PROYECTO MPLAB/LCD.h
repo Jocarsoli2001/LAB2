@@ -43,12 +43,9 @@
 // Pines
 #define LCD_E  RC1                   // Pin de Enable
 #define LCD_RS RC0                   // Pin de Register select
+#define LCD_RW RC2                   // Pin de RW
 #define LCD_databus PORTD            // Puerto que envia los datos a la pantalla
 
-// Direcciones de pines
-#define LCD_E_direc TRISC1           // Dirección de memoria del pin Enable
-#define LCD_RS_direc TRISC0          // Dirección de memoria del pin RS
-#define LCD_datos   TRISD            // Dirección de memoria del data bus
 
 
 //-----------------------Variables utilizadas---------------------------------

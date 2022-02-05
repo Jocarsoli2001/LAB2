@@ -48,11 +48,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52 ./ADC.h
 [; ;./ADC.h: 52: void conversion(void);
 [v _conversion `(v ~T0 @X0 0 ef ]
-"64 ./LCD.h
-[; ;./LCD.h: 64: void set_cursor(char a, char b);
+"61 ./LCD.h
+[; ;./LCD.h: 61: void set_cursor(char a, char b);
 [v _set_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"61
-[; ;./LCD.h: 61: void Escribir_stringLCD(const char*);
+"58
+[; ;./LCD.h: 58: void Escribir_stringLCD(const char*);
 [v _Escribir_stringLCD `(v ~T0 @X0 0 ef1`*Cuc ]
 "57 LAB2.c
 [; ;LAB2.c: 57: void conversion_char(void);
@@ -199,8 +199,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1068
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
 [v _RCSTAbits `VS36 ~T0 @X0 0 e@24 ]
-"60 ./LCD.h
-[; ;./LCD.h: 60: void Iniciar_LCD(void);
+"57 ./LCD.h
+[; ;./LCD.h: 57: void Iniciar_LCD(void);
 [v _Iniciar_LCD `(v ~T0 @X0 0 ef ]
 "58 LAB2.c
 [; ;LAB2.c: 58: void divisor(uint8_t a, char dig[]);

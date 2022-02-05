@@ -45,9 +45,9 @@
 [v _Escribir_datosLCD Escribir_datosLCD `(v  1 e 1 0 ]
 "32
 [v _Iniciar_LCD Iniciar_LCD `(v  1 e 1 0 ]
-"55
+"57
 [v _Escribir_stringLCD Escribir_stringLCD `(v  1 e 1 0 ]
-"66
+"68
 [v _set_cursor set_cursor `(v  1 e 1 0 ]
 "44 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB/ADC.h
 [v _cont1 cont1 `uc  1 e 1 0 ]
@@ -142,8 +142,6 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"1602
-[v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 [s S174 . 1 `uc 1 TMR1IE 1 0 :1:0 
@@ -223,10 +221,8 @@
 [v _RC0 RC0 `VEb  1 e 0 @56 ]
 "4136
 [v _RC1 RC1 `VEb  1 e 0 @57 ]
-"4448
-[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
-"4451
-[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"4139
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
 "358 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "46 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
@@ -256,23 +252,23 @@
 "32 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
 [v _Iniciar_LCD Iniciar_LCD `(v  1 e 1 0 ]
 {
-"53
+"55
 } 0
-"66
+"68
 [v _set_cursor set_cursor `(v  1 e 1 0 ]
 {
 [v set_cursor@a a `uc  1 a 1 wreg ]
 [v set_cursor@a a `uc  1 a 1 wreg ]
-[v set_cursor@b b `uc  1 p 1 1 ]
-[v set_cursor@a a `uc  1 a 1 2 ]
-"74
+[v set_cursor@b b `uc  1 p 1 0 ]
+[v set_cursor@a a `uc  1 a 1 1 ]
+"76
 } 0
 "18
 [v _Escribir_comandoLCD Escribir_comandoLCD `(v  1 e 1 0 ]
 {
 [v Escribir_comandoLCD@Comando Comando `uc  1 a 1 wreg ]
 [v Escribir_comandoLCD@Comando Comando `uc  1 a 1 wreg ]
-[v Escribir_comandoLCD@Comando Comando `uc  1 a 1 0 ]
+[v Escribir_comandoLCD@Comando Comando `uc  1 a 1 5 ]
 "23
 } 0
 "183 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
@@ -371,18 +367,18 @@
 {
 "34
 } 0
-"55 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+"57 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
 [v _Escribir_stringLCD Escribir_stringLCD `(v  1 e 1 0 ]
 {
-[v Escribir_stringLCD@d d `*.26DCuc  1 p 2 1 ]
-"59
+[v Escribir_stringLCD@d d `*.26DCuc  1 p 2 0 ]
+"61
 } 0
 "25
 [v _Escribir_datosLCD Escribir_datosLCD `(v  1 e 1 0 ]
 {
 [v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 wreg ]
 [v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 wreg ]
-[v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 0 ]
+[v Escribir_datosLCD@LCDchar LCDchar `uc  1 a 1 5 ]
 "30
 } 0
 "11

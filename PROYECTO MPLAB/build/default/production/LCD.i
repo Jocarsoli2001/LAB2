@@ -2498,7 +2498,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 34 "./LCD.h" 2
-# 58 "./LCD.h"
+# 55 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);
@@ -2513,9 +2513,9 @@ void shift_left(void);
 
 void prender_ELCD(void){
     RC1 = 1;
-    _delay((unsigned long)((4)*(8000000/4000.0)));
+    _delay((unsigned long)((500)*(8000000/4000000.0)));
     RC1 = 0;
-    _delay((unsigned long)((4)*(8000000/4000.0)));
+    _delay((unsigned long)((500)*(8000000/4000000.0)));
 }
 
 void Escribir_comandoLCD(unsigned char Comando){
@@ -2533,24 +2533,26 @@ void Escribir_datosLCD(char LCDchar){
 }
 
 void Iniciar_LCD(void){
-    RC1 = 0;
     RC0 = 0;
-    PORTD = 0;
-    TRISC1 = 0;
-    TRISC0 = 0;
-    TRISD = 0;
+    RC2 = 0;
 
-    _delay((unsigned long)((16)*(8000000/4000.0)));
+    _delay((unsigned long)((14)*(8000000/4000.0)));
     Escribir_datosLCD(0b00110000);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
+    _delay((unsigned long)((4)*(8000000/4000.0)));
     Escribir_datosLCD(0b00110000);
-    _delay((unsigned long)((200)*(8000000/4000000.0)));
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
     Escribir_datosLCD(0b00110000);
 
 
-    _delay((unsigned long)((100)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
     Escribir_datosLCD(0b00111000);
-    _delay((unsigned long)((100)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_datosLCD(0b00001000);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_datosLCD(0b00000001);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_datosLCD(0b00000110);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
     Escribir_datosLCD(0b00001100);
     return;
 }
