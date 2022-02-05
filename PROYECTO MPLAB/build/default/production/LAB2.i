@@ -2876,7 +2876,7 @@ char buffer2[10];
 char buffer3[10];
 char vol1[];
 char vol2[];
-char vol3[];
+char vol3 = 0;
 uint8_t dato = 0;
 uint8_t Cont_U = 0;
 
@@ -2924,7 +2924,7 @@ void main(void) {
 
         dato_recibido();
 
-        set_cursor(2,13);
+        set_cursor(2,14);
         Escribir_stringLCD(buffer3);
     }
 }
@@ -3006,10 +3006,8 @@ void dato_recibido(void){
     if(dato == 75){
         Cont_U++;
     }
-    if(dato == 77){
+    if(dato == 77 ){
         Cont_U--;
     }
-
-    divisor(Cont_U, vol3);
-    sprintf(buffer3, "%d.%d%d", vol3[2], vol3[1], vol3[0]);
+    sprintf(buffer3, "%d", Cont_U);
 }

@@ -241,8 +241,6 @@
 [v _vol1 vol1 `[1]uc  1 e 1 0 ]
 "50
 [v _vol2 vol2 `[1]uc  1 e 1 0 ]
-"51
-[v _vol3 vol3 `[1]uc  1 e 1 0 ]
 "52
 [v _dato dato `uc  1 e 1 0 ]
 "53
@@ -272,8 +270,8 @@
 {
 [v set_cursor@a a `uc  1 a 1 wreg ]
 [v set_cursor@a a `uc  1 a 1 wreg ]
-[v set_cursor@b b `uc  1 p 1 6 ]
-[v set_cursor@a a `uc  1 a 1 0 ]
+[v set_cursor@b b `uc  1 p 1 0 ]
+[v set_cursor@a a `uc  1 a 1 1 ]
 "65
 } 0
 "18
@@ -287,7 +285,7 @@
 "177 D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
 [v _dato_recibido dato_recibido `(v  1 e 1 0 ]
 {
-"187
+"185
 } 0
 "161
 [v _conversion_char conversion_char `(v  1 e 1 0 ]
@@ -299,27 +297,27 @@
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "545
-[v sprintf@val val `ui  1 a 2 24 ]
+[v sprintf@val val `ui  1 a 2 25 ]
 "512
-[v sprintf@c c `uc  1 a 1 27 ]
+[v sprintf@c c `uc  1 a 1 28 ]
 "521
-[v sprintf@prec prec `c  1 a 1 23 ]
+[v sprintf@prec prec `c  1 a 1 24 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 22 ]
+[v sprintf@flag flag `uc  1 a 1 23 ]
 "507
-[v sprintf@ap ap `[1]*.4v  1 a 1 21 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 22 ]
 "505
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 11 ]
+[v sprintf@f f `*.24DCuc  1 p 1 12 ]
 "550
-[v sprintf@sp sp `*.4uc  1 a 1 26 ]
+[v sprintf@sp sp `*.4uc  1 a 1 27 ]
 "1567
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwmod@counter counter `uc  1 a 1 6 ]
+[v ___lwmod@counter counter `uc  1 a 1 11 ]
 "5
 [v ___lwmod@divisor divisor `ui  1 p 2 7 ]
 [v ___lwmod@dividend dividend `ui  1 p 2 9 ]
@@ -342,21 +340,21 @@
 {
 [v divisor@a a `uc  1 a 1 wreg ]
 "171
-[v divisor@i i `i  1 a 2 14 ]
+[v divisor@i i `i  1 a 2 13 ]
 "170
-[v divisor@b b `i  1 a 2 12 ]
+[v divisor@b b `i  1 a 2 11 ]
 "169
 [v divisor@a a `uc  1 a 1 wreg ]
-[v divisor@dig dig `*.4uc  1 p 1 8 ]
-[v divisor@a a `uc  1 a 1 11 ]
+[v divisor@dig dig `*.4uc  1 p 1 5 ]
+[v divisor@a a `uc  1 a 1 10 ]
 "175
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
 "5
 [v ___awmod@divisor divisor `i  1 p 2 0 ]
 [v ___awmod@dividend dividend `i  1 p 2 2 ]

@@ -514,8 +514,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB2.c: 50: char vol2[];
 [v _vol2 `uc ~T0 @X0 -> -> 1 `i `ux e ]
 "51
-[; ;LAB2.c: 51: char vol3[];
-[v _vol3 `uc ~T0 @X0 -> -> 1 `i `ux e ]
+[; ;LAB2.c: 51: char vol3 = 0;
+[v _vol3 `uc ~T0 @X0 1 e ]
+[i _vol3
+-> -> 0 `i `uc
+]
 "52
 [; ;LAB2.c: 52: uint8_t dato = 0;
 [v _dato `uc ~T0 @X0 1 e ]
@@ -609,8 +612,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB2.c: 97:         dato_recibido();
 [e ( _dato_recibido ..  ]
 "99
-[; ;LAB2.c: 99:         set_cursor(2,13);
-[e ( _set_cursor (2 , -> -> 2 `i `uc -> -> 13 `i `uc ]
+[; ;LAB2.c: 99:         set_cursor(2,14);
+[e ( _set_cursor (2 , -> -> 2 `i `uc -> -> 14 `i `uc ]
 "100
 [; ;LAB2.c: 100:         Escribir_stringLCD(buffer3);
 [e ( _Escribir_stringLCD (1 -> &U _buffer3 `*Cuc ]
@@ -814,7 +817,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 157 ]
 "181
-[; ;LAB2.c: 181:     if(dato == 77){
+[; ;LAB2.c: 181:     if(dato == 77 ){
 [e $ ! == -> _dato `i -> 77 `i 158  ]
 {
 "182
@@ -824,18 +827,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB2.c: 183:     }
 }
 [e :U 158 ]
+"184
+[; ;LAB2.c: 184:     sprintf(buffer3, "%d", Cont_U);
+[e ( _sprintf (1 , (. , &U _buffer3 :s 4C -> _Cont_U `i ]
 "185
-[; ;LAB2.c: 185:     divisor(Cont_U, vol3);
-[e ( _divisor (2 , _Cont_U &U _vol3 ]
-"186
-[; ;LAB2.c: 186:     sprintf(buffer3, "%d.%d%d", vol3[2], vol3[1], vol3[0]);
-[e ( _sprintf (1 , , , (. , &U _buffer3 :s 4C -> *U + &U _vol3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i -> *U + &U _vol3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i -> *U + &U _vol3 * -> -> -> 0 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i ]
-"187
-[; ;LAB2.c: 187: }
+[; ;LAB2.c: 185: }
 [e :UE 156 ]
 }
 [p f _sprintf 8388736 ]
 [a 2C 37 100 46 37 100 37 100 0 ]
 [a 3C 37 100 46 37 100 37 100 0 ]
-[a 4C 37 100 46 37 100 37 100 0 ]
+[a 4C 37 100 0 ]
 [a 1C 83 49 58 32 32 32 32 83 50 58 32 32 32 83 51 58 0 ]
