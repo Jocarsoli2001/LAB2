@@ -2897,6 +2897,12 @@ void __attribute__((picinterrupt(("")))) isr(void){
     }
     if(PIR1bits.RCIF){
         dato = RCREG;
+        if(dato == 75){
+            Cont_U++;
+        }
+        if(dato == 77){
+            Cont_U--;
+        }
 
     }
 
@@ -3003,11 +3009,5 @@ void divisor(uint8_t a, char dig[]){
 }
 
 void dato_recibido(void){
-    if(dato == 75){
-        Cont_U++;
-    }
-    if(dato == 77 ){
-        Cont_U--;
-    }
     sprintf(buffer3, "%d", Cont_U);
 }

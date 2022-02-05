@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\PROYECTO_MPLAB.production.sym \
   --cmf=dist/default/production\PROYECTO_MPLAB.production.cmf -z -Q16F887 \
-  -oC:\Users\jocar\AppData\Local\Temp\xcAs4r8.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\jocar\AppData\Local\Temp\xcAs4uc.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/PROYECTO_MPLAB.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\jocar\AppData\Local\Temp\xcAs4r8.o \
+  -pfunctab=ENTRY -k C:\Users\jocar\AppData\Local\Temp\xcAs4uc.o \
   dist/default/production\PROYECTO_MPLAB.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\jocar\AppData\Local\Temp\xcAs4r8.o
+C:\Users\jocar\AppData\Local\Temp\xcAs4uc.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -36,12 +36,12 @@ dist/default/production\PROYECTO_MPLAB.production.o
                 cinit                                 F        F       11        8       0
                 intentry                              4        4        8        8       0
                 config                             2007     2007        2        0       4
-                text19                              4B9      4B9       1E      7FA       0
-                text18                              4D7      4D7       1D      7FA       0
-                text17                              4F4      4F4       15      7FA       0
+                text19                              4C2      4C2       1E      7FA       0
+                text18                              3FD      3FD       2F      7FA       0
+                text17                              4E0      4E0       15      7FA       0
                 text16                              527      527        C      7FA       0
-                text15                              429      429       28      7FA       0
-                text14                              3FD      3FD       2C      7FA       0
+                text15                              458      458       28      7FA       0
+                text14                              42C      42C       2C      7FA       0
                 text13                              17D      17D       69        8       0
                 text12                              241      241       5B        8       0
                 text11                              29C      29C       57        8       0
@@ -49,10 +49,10 @@ dist/default/production\PROYECTO_MPLAB.production.o
                 text9                               38E      38E       3C        8       0
                 text8                                20       20       EA        8       0
                 text7                               1E6      1E6       5B        8       0
-                text6                               451      451       26      7FA       0
+                text6                               4F5      4F5       14      7FA       0
                 text5                               51B      51B        C      7FA       0
-                text4                               49A      49A       1F      7FA       0
-                text3                               477      477       23      7FA       0
+                text4                               4A3      4A3       1F      7FA       0
+                text3                               480      480       23      7FA       0
                 text2                               509      509       12      7FA       0
                 text1                               2F3      2F3       55        8       0
                 maintext                            10A      10A       73        8       0
@@ -71,12 +71,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                 F        F       11         0
                 intentry                              4        4        8         0
                 reset_vec                             0        0        3         0
-                text19                              4B9      4B9       1E         0
-                text18                              4D7      4D7       1D         0
-                text17                              4F4      4F4       15         0
+                text19                              4C2      4C2       1E         0
+                text18                              3FD      3FD       2F         0
+                text17                              4E0      4E0       15         0
                 text16                              527      527        C         0
-                text15                              429      429       28         0
-                text14                              3FD      3FD       2C         0
+                text15                              458      458       28         0
+                text14                              42C      42C       2C         0
                 text13                              17D      17D       69         0
                 text12                              241      241       5B         0
                 text11                              29C      29C       57         0
@@ -84,10 +84,10 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text9                               38E      38E       3C         0
                 text8                                20       20       EA         0
                 text7                               1E6      1E6       5B         0
-                text6                               451      451       26         0
+                text6                               4F5      4F5       14         0
                 text5                               51B      51B        C         0
-                text4                               49A      49A       1F         0
-                text3                               477      477       23         0
+                text4                               4A3      4A3       1F         0
+                text3                               480      480       23         0
                 text2                               509      509       12         0
                 text1                               2F3      2F3       55         0
                 maintext                            10A      10A       73         0
@@ -145,7 +145,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK0                    000020  000049  000069        20       1  BANK0       1
                 cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
                 strings                        0003CA  000033  0003FD       794       0  STRING      2
-                text14                         0003FD  00013E  00053B       7FA       0  CODE        2
+                text18                         0003FD  00013E  00053B       7FA       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -188,7 +188,7 @@ UNUSED ADDRESS RANGES
 Escribir_comandoLCD@Comando   cstackCOMMON 0075
 Escribir_datosLCD@LCDchar     cstackCOMMON 0075
 Escribir_stringLCD@d          cstackBANK0  0020
-_ADC                          text19       04B9
+_ADC                          text19       04C2
 _ADCON0bits                   (abs)        001F
 _ADCON1bits                   (abs)        009F
 _ADRESH                       (abs)        001E
@@ -198,9 +198,9 @@ _BAUDCTLbits                  (abs)        0187
 _Cont_U                       bssBANK0     0045
 _Escribir_comandoLCD          text5        051B
 _Escribir_datosLCD            text16       0527
-_Escribir_stringLCD           text15       0429
+_Escribir_stringLCD           text15       0458
 _INTCONbits                   (abs)        000B
-_Iniciar_LCD                  text3        0477
+_Iniciar_LCD                  text3        0480
 _Limpiar_pantallaLCD          text2        0509
 _OSCCONbits                   (abs)        008F
 _PIE1bits                     (abs)        008C
@@ -321,11 +321,11 @@ ___lwmod@divisor              cstackBANK0  0027
 ___sp                         stack        0000
 ___stackhi                    (abs)        0000
 ___stacklo                    (abs)        0000
-__end_of_ADC                  text19       04D7
+__end_of_ADC                  text19       04E0
 __end_of_Escribir_comandoLCD  text5        0527
 __end_of_Escribir_datosLCD    text16       0533
-__end_of_Escribir_stringLCD   text15       0451
-__end_of_Iniciar_LCD          text3        049A
+__end_of_Escribir_stringLCD   text15       0480
+__end_of_Iniciar_LCD          text3        04A3
 __end_of_Limpiar_pantallaLCD  text2        051B
 __end_of___awdiv              text13       01E6
 __end_of___awmod              text12       029C
@@ -333,15 +333,15 @@ __end_of___lwdiv              text10       038E
 __end_of___lwmod              text9        03CA
 __end_of__initialization      cinit        001C
 __end_of__stringtab           strings      03DA
-__end_of_conversion           text14       0429
+__end_of_conversion           text14       0458
 __end_of_conversion_char      text7        0241
-__end_of_dato_recibido        text6        0477
+__end_of_dato_recibido        text6        0509
 __end_of_divisor              text11       02F3
 __end_of_dpowers              strings      03E4
-__end_of_isr                  text18       04F4
+__end_of_isr                  text18       042C
 __end_of_main                 maintext     017D
-__end_of_prender_ELCD         text17       0509
-__end_of_set_cursor           text4        04B9
+__end_of_prender_ELCD         text17       04F5
+__end_of_set_cursor           text4        04C2
 __end_of_setup                text1        0348
 __end_of_sprintf              text8        010A
 __initialization              cinit        000F
@@ -357,17 +357,17 @@ __ptext10                     text10       0348
 __ptext11                     text11       029C
 __ptext12                     text12       0241
 __ptext13                     text13       017D
-__ptext14                     text14       03FD
-__ptext15                     text15       0429
+__ptext14                     text14       042C
+__ptext15                     text15       0458
 __ptext16                     text16       0527
-__ptext17                     text17       04F4
-__ptext18                     text18       04D7
-__ptext19                     text19       04B9
+__ptext17                     text17       04E0
+__ptext18                     text18       03FD
+__ptext19                     text19       04C2
 __ptext2                      text2        0509
-__ptext3                      text3        0477
-__ptext4                      text4        049A
+__ptext3                      text3        0480
+__ptext4                      text4        04A3
 __ptext5                      text5        051B
-__ptext6                      text6        0451
+__ptext6                      text6        04F5
 __ptext7                      text7        01E6
 __ptext8                      text8        0020
 __ptext9                      text9        038E
@@ -398,16 +398,16 @@ _buffer2                      bssBANK0     0053
 _buffer3                      bssBANK0     0049
 _cont1                        bssBANK0     0048
 _cont2                        bssBANK0     0047
-_conversion                   text14       03FD
+_conversion                   text14       042C
 _conversion_char              text7        01E6
-_dato                         bssBANK0     0046
-_dato_recibido                text6        0451
+_dato                         bssCOMMON    0076
+_dato_recibido                text6        04F5
 _divisor                      text11       029C
 _dpowers                      strings      03DA
-_isr                          text18       04D7
+_isr                          text18       03FD
 _main                         maintext     010A
-_prender_ELCD                 text17       04F4
-_set_cursor                   text4        049A
+_prender_ELCD                 text17       04E0
+_set_cursor                   text4        04A3
 _setup                        text1        02F3
 _sprintf                      text8        0020
 _vol1                         bssBANK0     0068
@@ -447,11 +447,11 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 LAB2.c
 		_main          		CODE           	010A	0000	115
-		_isr           		CODE           	04D7	0000	29
+		_isr           		CODE           	03FD	0000	47
 		_conversion_char		CODE           	01E6	0000	91
 		_setup         		CODE           	02F3	0000	85
 		_divisor       		CODE           	029C	0000	87
-		_dato_recibido 		CODE           	0451	0000	38
+		_dato_recibido 		CODE           	04F5	0000	20
 
 LAB2.c estimated size: 445
 
@@ -473,8 +473,8 @@ shared
 shared estimated size: 39
 
 ADC.c
-		_ADC           		CODE           	04B9	0000	30
-		_conversion    		CODE           	03FD	0000	44
+		_ADC           		CODE           	04C2	0000	30
+		_conversion    		CODE           	042C	0000	44
 
 ADC.c estimated size: 74
 
@@ -494,12 +494,12 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c estimated size: 105
 
 LCD.c
-		_Iniciar_LCD   		CODE           	0477	0000	35
-		_set_cursor    		CODE           	049A	0000	31
-		_Escribir_stringLCD		CODE           	0429	0000	40
+		_Iniciar_LCD   		CODE           	0480	0000	35
+		_set_cursor    		CODE           	04A3	0000	31
+		_Escribir_stringLCD		CODE           	0458	0000	40
 		_Limpiar_pantallaLCD		CODE           	0509	0000	18
 		_Escribir_comandoLCD		CODE           	051B	0000	12
-		_prender_ELCD  		CODE           	04F4	0000	21
+		_prender_ELCD  		CODE           	04E0	0000	21
 		_Escribir_datosLCD		CODE           	0527	0000	12
 
 LCD.c estimated size: 169
