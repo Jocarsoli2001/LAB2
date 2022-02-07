@@ -72,12 +72,12 @@ void __interrupt() isr(void){
     }
     if(PIR1bits.RCIF){
         dato = RCREG;
-        if(dato == 0x2B || dato == 77){
-            Cont_U++;
+        if(dato == 0x2B || dato == 77){             // Se colocó un or en la tecla + ya que a veces detectaba el más como 77 y otra veces como 43
+            Cont_U++;                               // Aumentar contador de USART
         }
-        if(dato == 0x2D || dato == 75){
-            Cont_U--;
-        }
+        if(dato == 0x2D || dato == 75){             // Se colocó un or en la tecla - ya que a veces detectaba el más como 75 y otra veces como 45
+            Cont_U--;                               // Disminuir contador de USART
+        }       
         
     }
     
@@ -154,19 +154,7 @@ void setup(void){
     INTCONbits.GIE = 1;                             // Habilitar interrupciones globales                        
     
     //Configuración de TX y RX
-    TXSTAbits.SYNC = 0;                             // Transmisión asíncrona
-    TXSTAbits.BRGH = 1;                             // Baud rate a velocidad baja
-    
-    BAUDCTLbits.BRG16 = 0;                          // Baud rate de 16 bits
-    
-    SPBRG = 25;                                     // SPBRG:SPBRGH = 25
-    SPBRGH = 0;
-    
-    RCSTAbits.SPEN = 1;                                 // Puertos seriales habilitados
-    RCSTAbits.RX9 = 0;                                  // Recepción de datos de 8 bits 
-    RCSTAbits.CREN = 1;                                 // Recepción continua habilitada
-    
-    TXSTAbits.TXEN = 1;                                 // Transmisiones habilitadas
+    Config_USART(9600,4);
     
 }
 

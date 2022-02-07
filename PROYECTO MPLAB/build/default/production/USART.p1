@@ -58,12 +58,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1068
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
 [v _RCSTAbits `VS36 ~T0 @X0 0 e@24 ]
-"1140
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
-[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
-"1133
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
-[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -459,32 +453,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79
 [; ;USART.c: 79: }
 [e :UE 138 ]
-}
-"81
-[; ;USART.c: 81: void Recibir_dato(int dato){
-[v _Recibir_dato `(v ~T0 @X0 1 ef1`i ]
-{
-[e :U _Recibir_dato ]
-[v _dato `i ~T0 @X0 1 r1 ]
-[f ]
-"82
-[; ;USART.c: 82:     dato = RCREG;
-[e = _dato -> _RCREG `i ]
-"83
-[; ;USART.c: 83: }
-[e :UE 145 ]
-}
-"85
-[; ;USART.c: 85: void Mandar_dato(int dato){
-[v _Mandar_dato `(v ~T0 @X0 1 ef1`i ]
-{
-[e :U _Mandar_dato ]
-[v _dato `i ~T0 @X0 1 r1 ]
-[f ]
-"86
-[; ;USART.c: 86:     TXREG = dato;
-[e = _TXREG -> _dato `uc ]
-"87
-[; ;USART.c: 87: }
-[e :UE 146 ]
 }

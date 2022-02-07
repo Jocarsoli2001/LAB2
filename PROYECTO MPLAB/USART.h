@@ -30,7 +30,7 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 void Config_USART(int baud_rate, int Freq);
-void Recibir_dato(int dato);
+int Recibir_dato(int dato);
 void Mandar_dato(int dato);
 
 

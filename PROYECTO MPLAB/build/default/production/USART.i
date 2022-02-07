@@ -2501,7 +2501,7 @@ extern __bank0 __bit __timeout;
 # 1 "./USART.h" 1
 # 32 "./USART.h"
 void Config_USART(int baud_rate, int Freq);
-void Recibir_dato(int dato);
+int Recibir_dato(int dato);
 void Mandar_dato(int dato);
 # 11 "USART.c" 2
 
@@ -2572,12 +2572,4 @@ void Config_USART(int baud_rate, int Freq){
     RCSTAbits.CREN = 1;
 
     TXSTAbits.TXEN = 1;
-}
-
-void Recibir_dato(int dato){
-    dato = RCREG;
-}
-
-void Mandar_dato(int dato){
-    TXREG = dato;
 }

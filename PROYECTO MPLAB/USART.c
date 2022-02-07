@@ -78,11 +78,5 @@ void Config_USART(int baud_rate, int Freq){
     TXSTAbits.TXEN = 1;                                 // Transmisiones habilitadas
 }
 
-void Recibir_dato(int dato){
-    dato = RCREG;
-}
 
-void Mandar_dato(int dato){
-    TXREG = dato;
-}
 

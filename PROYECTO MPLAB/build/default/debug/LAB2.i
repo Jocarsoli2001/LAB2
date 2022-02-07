@@ -2896,7 +2896,7 @@ void config_ADC(int channel);
 # 1 "./USART.h" 1
 # 32 "./USART.h"
 void Config_USART(int baud_rate, int Freq);
-void Recibir_dato(int dato);
+int Recibir_dato(int dato);
 void Mandar_dato(int dato);
 # 40 "LAB2.c" 2
 
@@ -3016,19 +3016,7 @@ void setup(void){
     INTCONbits.GIE = 1;
 
 
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-
-    BAUDCTLbits.BRG16 = 0;
-
-    SPBRG = 25;
-    SPBRGH = 0;
-
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TXEN = 1;
+    Config_USART(9600,4);
 
 }
 
