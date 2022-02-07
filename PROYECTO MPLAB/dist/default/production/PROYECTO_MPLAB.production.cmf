@@ -11,37 +11,38 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
+$C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\PROYECTO_MPLAB.production.o
 cinit CODE 0 F F 11 2
-text1 CODE 0 3AE 3AE 4D 2
-text2 CODE 0 3FB 3FB 4B 2
-text3 CODE 0 63F 63F 14 2
-text4 CODE 0 2A1 2A1 5B 2
-text5 CODE 0 20 20 EA 2
-text6 CODE 0 53F 53F 3C 2
-text7 CODE 0 446 446 46 2
-text8 CODE 0 357 357 57 2
-text9 CODE 0 2FC 2FC 5B 2
-text10 CODE 0 238 238 69 2
-text11 CODE 0 5D9 5D9 2C 2
-text12 CODE 0 623 623 1C 2
-text13 CODE 0 1C4 1C4 74 2
-text14 CODE 0 57B 57B 2F 2
-text15 CODE 0 48C 48C 43 2
-text16 CODE 0 653 653 E 2
-text17 CODE 0 5AA 5AA 2F 2
-text18 CODE 0 605 605 1E 2
+text1 CODE 0 3FF 3FF 4D 2
+text2 CODE 0 44C 44C 4B 2
+text3 CODE 0 600 600 2E 2
+text4 CODE 0 3AE 3AE 51 2
+text5 CODE 0 2A1 2A1 5B 2
+text6 CODE 0 20 20 EA 2
+text7 CODE 0 566 566 3C 2
+text8 CODE 0 4DD 4DD 46 2
+text9 CODE 0 357 357 57 2
+text10 CODE 0 2FC 2FC 5B 2
+text11 CODE 0 238 238 69 2
+text12 CODE 0 62E 62E 2C 2
+text13 CODE 0 678 678 1C 2
+text14 CODE 0 1C4 1C4 74 2
+text15 CODE 0 5A2 5A2 2F 2
+text16 CODE 0 523 523 43 2
+text17 CODE 0 694 694 E 2
+text18 CODE 0 5D1 5D1 2F 2
+text19 CODE 0 65A 65A 1E 2
 maintext CODE 0 10A 10A BA 2
 cstackCOMMON COMMON 1 70 70 6 1
 cstackBANK0 BANK0 1 20 20 27 1
 intentry CODE 0 4 4 8 2
 bssBANK0 BANK0 1 47 47 24 1
-strings STRING 0 500 500 3F 2
-clrtext CODE 0 661 661 8 2
+strings STRING 0 497 497 46 2
+clrtext CODE 0 6A2 6A2 8 2
 bssCOMMON COMMON 1 76 76 4 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -59,16 +60,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 4CF-4FF 2
-CONST 669-1FFF 2
+CONST 6AA-1FFF 2
 ENTRY 3-3 2
-ENTRY 4CF-4FF 2
-ENTRY 669-1FFF 2
+ENTRY 6AA-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 4CF-4FF 2
-CODE 669-1FFF 2
+CODE 6AA-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -76,11 +74,9 @@ SFR3 180-18F 1
 COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 4CF-4FF 2
-STRCODE 669-1FFF 2
+STRCODE 6AA-1FFF 2
 STRING 3-3 2
-STRING 4CF-4FF 2
-STRING 669-1FFF 2
+STRING 6AA-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -95,353 +91,364 @@ STRING 669-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PROYECTO_MPLAB.production.o
-F cinit CODE >927:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-F cinit CODE >930:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-F cinit CODE >995:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-10 cinit CODE >996:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-11 cinit CODE >997:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-12 cinit CODE >998:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-13 cinit CODE >1001:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-14 cinit CODE >1002:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-15 cinit CODE >1003:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-16 cinit CODE >1004:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-17 cinit CODE >1005:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-1C cinit CODE >1011:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-1C cinit CODE >1013:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-1D cinit CODE >1014:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-4 intentry CODE >66:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-605 text18 CODE >11:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-605 text18 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-60C text18 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-610 text18 CODE >13:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-614 text18 CODE >14:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-615 text18 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-61A text18 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-61E text18 CODE >16:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-622 text18 CODE >19:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5AA text17 CODE >66:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5AA text17 CODE >67:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5B0 text17 CODE >68:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5B5 text17 CODE >69:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5B8 text17 CODE >71:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5BC text17 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5C0 text17 CODE >73:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5C6 text17 CODE >74:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5CA text17 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5CA text17 CODE >76:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5D0 text17 CODE >77:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-5D2 text17 CODE >82:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-653 text16 CODE >11:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-653 text16 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-656 text16 CODE >13:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-65D text16 CODE >14:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-660 text16 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-48C text15 CODE >17:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-48D text15 CODE >18:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-498 text15 CODE >19:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-49F text15 CODE >20:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4A6 text15 CODE >21:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4AD text15 CODE >22:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4B4 text15 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4BB text15 CODE >24:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4C2 text15 CODE >25:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4C9 text15 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-4CE text15 CODE >28:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-57B text14 CODE >55:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-57B text14 CODE >56:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-57F text14 CODE >58:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-581 text14 CODE >59:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-585 text14 CODE >59:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-592 text14 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-59C text14 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-5A5 text14 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-5A9 text14 CODE >61:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1C4 text13 CODE >30:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1C4 text13 CODE >31:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1C7 text13 CODE >32:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1C8 text13 CODE >34:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1D2 text13 CODE >35:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1D8 text13 CODE >36:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1E3 text13 CODE >37:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1E9 text13 CODE >38:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1F0 text13 CODE >39:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1F6 text13 CODE >42:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-1FD text13 CODE >43:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-203 text13 CODE >44:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-20A text13 CODE >45:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-210 text13 CODE >46:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-217 text13 CODE >47:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-21D text13 CODE >48:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-224 text13 CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-22A text13 CODE >50:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-231 text13 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-237 text13 CODE >53:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-623 text12 CODE >63:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-623 text12 CODE >64:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-627 text12 CODE >66:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-62D text12 CODE >67:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-638 text12 CODE >68:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-63E text12 CODE >69:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-5D9 text11 CODE >21:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5D9 text11 CODE >22:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5DF text11 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5E4 text11 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5E8 text11 CODE >24:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5EA text11 CODE >25:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5EE text11 CODE >26:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5EF text11 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5F4 text11 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5F8 text11 CODE >28:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-5FD text11 CODE >31:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-601 text11 CODE >32:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-604 text11 CODE >34:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
-238 text10 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-238 text10 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-23B text10 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-23F text10 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-242 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-244 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-246 text10 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-24A text10 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-24D text10 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-24F text10 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-253 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-255 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-25B text10 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-25D text10 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-25E text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-25F text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-263 text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-265 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-269 text10 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-26D text10 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-26E text10 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-272 text10 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-274 text10 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-276 text10 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-27A text10 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-27E text10 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-281 text10 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-284 text10 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-285 text10 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-286 text10 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-28A text10 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-28C text10 CODE >36:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-292 text10 CODE >38:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-297 text10 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-29A text10 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-29C text10 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-2A0 text10 CODE >41:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-2FC text9 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-2FC text9 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-2FF text9 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-303 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-306 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-308 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-30A text9 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-30E text9 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-311 text9 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-313 text9 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-319 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-31B text9 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-31C text9 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-31D text9 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-321 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-323 text9 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-327 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-32B text9 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-32D text9 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-331 text9 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-335 text9 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-338 text9 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-33B text9 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-33C text9 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-340 text9 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-342 text9 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-348 text9 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-34D text9 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-350 text9 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-352 text9 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-356 text9 CODE >34:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
-357 text8 CODE >186:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-35A text8 CODE >187:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-35D text8 CODE >187:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-362 text8 CODE >188:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-364 text8 CODE >189:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-37F text8 CODE >190:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-38C text8 CODE >190:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-39A text8 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-39C text8 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3A5 text8 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3A9 text8 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3AD text8 CODE >192:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-446 text7 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-446 text7 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-44A text7 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-450 text7 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-452 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-453 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-454 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-458 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-45A text7 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-45E text7 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-462 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-463 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-467 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-469 text7 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-46B text7 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-46F text7 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-473 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-476 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-479 text7 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-47A text7 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-47B text7 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-47F text7 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-481 text7 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-487 text7 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-48B text7 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
-53F text6 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-53F text6 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-547 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-549 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-54A text6 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-54B text6 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-54F text6 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-551 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-555 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-559 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-55B text6 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-55F text6 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-563 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-566 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-569 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-56A text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-56E text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-570 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-576 text6 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-57A text6 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
-20 text5 CODE >505:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-23 text5 CODE >550:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-27 text5 CODE >553:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-28 text5 CODE >555:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-2E text5 CODE >558:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-39 text5 CODE >559:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-3A text5 CODE >565:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-3B text5 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-4A text5 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-4F text5 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-52 text5 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-55 text5 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-58 text5 CODE >1285:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-64 text5 CODE >1287:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-68 text5 CODE >1288:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-6C text5 CODE >1289:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-6F text5 CODE >1289:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-71 text5 CODE >1331:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-73 text5 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-86 text5 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-8A text5 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-8F text5 CODE >1333:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-99 text5 CODE >1464:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-9F text5 CODE >1465:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-AA text5 CODE >1498:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-AE text5 CODE >1500:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-AF text5 CODE >1515:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-DF text5 CODE >1550:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-EA text5 CODE >1500:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-F3 text5 CODE >553:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-105 text5 CODE >1564:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-109 text5 CODE >1567:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
-2A1 text4 CODE >178:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-2A1 text4 CODE >179:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-2AD text4 CODE >180:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-2CE text4 CODE >182:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-2DA text4 CODE >183:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-2FB text4 CODE >184:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-63F text3 CODE >194:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-63F text3 CODE >195:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-652 text3 CODE >196:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3FB text2 CODE >71:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-3FE text2 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-400 text2 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-40C text2 CODE >76:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-418 text2 CODE >78:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-423 text2 CODE >80:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-42B text2 CODE >82:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-431 text2 CODE >83:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-435 text2 CODE >81:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-43A text2 CODE >86:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-445 text2 CODE >89:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
-3AE text1 CODE >121:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3AE text1 CODE >124:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3B2 text1 CODE >125:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3B3 text1 CODE >127:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3B7 text1 CODE >128:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3B8 text1 CODE >129:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3B9 text1 CODE >130:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3BA text1 CODE >131:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3BB text1 CODE >133:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3BE text1 CODE >134:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3BF text1 CODE >135:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3C0 text1 CODE >136:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3C1 text1 CODE >137:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3C2 text1 CODE >140:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3C8 text1 CODE >141:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3C9 text1 CODE >144:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3CA text1 CODE >145:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3CB text1 CODE >146:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3CC text1 CODE >148:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3D2 text1 CODE >149:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3D4 text1 CODE >150:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3D5 text1 CODE >151:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3DA text1 CODE >154:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3DD text1 CODE >155:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E0 text1 CODE >156:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E3 text1 CODE >157:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E6 text1 CODE >158:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E7 text1 CODE >159:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E8 text1 CODE >162:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3E9 text1 CODE >163:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3EA text1 CODE >165:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3ED text1 CODE >167:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3F1 text1 CODE >168:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3F2 text1 CODE >170:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3F5 text1 CODE >171:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3F6 text1 CODE >172:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3F7 text1 CODE >174:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-3FA text1 CODE >176:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-10A maintext CODE >85:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+F cinit CODE >940:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+F cinit CODE >943:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+F cinit CODE >1008:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+10 cinit CODE >1009:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+11 cinit CODE >1010:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+12 cinit CODE >1011:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+13 cinit CODE >1014:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+14 cinit CODE >1015:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+15 cinit CODE >1016:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+16 cinit CODE >1017:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+17 cinit CODE >1018:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+1C cinit CODE >1024:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+1C cinit CODE >1026:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+1D cinit CODE >1027:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+4 intentry CODE >67:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+65A text19 CODE >11:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+65A text19 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+661 text19 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+665 text19 CODE >13:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+669 text19 CODE >14:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+66A text19 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+66F text19 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+673 text19 CODE >16:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+677 text19 CODE >19:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+5D1 text18 CODE >67:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5D1 text18 CODE >68:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5D7 text18 CODE >69:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5DC text18 CODE >70:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5DF text18 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5E3 text18 CODE >73:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5E7 text18 CODE >74:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5ED text18 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5F1 text18 CODE >76:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5F1 text18 CODE >77:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5F7 text18 CODE >78:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+5F9 text18 CODE >83:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+694 text17 CODE >11:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+694 text17 CODE >12:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+697 text17 CODE >13:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+69E text17 CODE >14:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+6A1 text17 CODE >15:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+523 text16 CODE >17:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+524 text16 CODE >18:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+52F text16 CODE >19:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+536 text16 CODE >20:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+53D text16 CODE >21:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+544 text16 CODE >22:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+54B text16 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+552 text16 CODE >24:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+559 text16 CODE >25:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+560 text16 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+565 text16 CODE >28:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5A2 text15 CODE >55:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5A2 text15 CODE >56:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5A6 text15 CODE >58:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5A8 text15 CODE >59:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5AC text15 CODE >59:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5B9 text15 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5C3 text15 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5CC text15 CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+5D0 text15 CODE >61:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1C4 text14 CODE >30:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1C4 text14 CODE >31:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1C7 text14 CODE >32:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1C8 text14 CODE >34:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1D2 text14 CODE >35:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1D8 text14 CODE >36:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1E3 text14 CODE >37:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1E9 text14 CODE >38:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1F0 text14 CODE >39:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1F6 text14 CODE >42:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+1FD text14 CODE >43:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+203 text14 CODE >44:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+20A text14 CODE >45:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+210 text14 CODE >46:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+217 text14 CODE >47:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+21D text14 CODE >48:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+224 text14 CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+22A text14 CODE >50:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+231 text14 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+237 text14 CODE >53:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+678 text13 CODE >63:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+678 text13 CODE >64:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+67C text13 CODE >66:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+682 text13 CODE >67:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+68D text13 CODE >68:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+693 text13 CODE >69:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+62E text12 CODE >21:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+62E text12 CODE >22:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+634 text12 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+639 text12 CODE >23:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+63D text12 CODE >24:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+63F text12 CODE >25:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+643 text12 CODE >26:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+644 text12 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+649 text12 CODE >27:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+64D text12 CODE >28:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+652 text12 CODE >31:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+656 text12 CODE >32:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+659 text12 CODE >34:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\ADC.c
+238 text11 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+238 text11 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+23B text11 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+23F text11 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+242 text11 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+244 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+246 text11 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+24A text11 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+24D text11 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+24F text11 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+253 text11 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+255 text11 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+25B text11 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+25D text11 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+25E text11 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+25F text11 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+263 text11 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+265 text11 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+269 text11 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+26D text11 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+26E text11 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+272 text11 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+274 text11 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+276 text11 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+27A text11 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+27E text11 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+281 text11 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+284 text11 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+285 text11 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+286 text11 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+28A text11 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+28C text11 CODE >36:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+292 text11 CODE >38:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+297 text11 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+29A text11 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+29C text11 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+2A0 text11 CODE >41:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
+2FC text10 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+2FC text10 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+2FF text10 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+303 text10 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+306 text10 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+308 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+30A text10 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+30E text10 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+311 text10 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+313 text10 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+319 text10 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+31B text10 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+31C text10 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+31D text10 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+321 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+323 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+327 text10 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+32B text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+32D text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+331 text10 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+335 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+338 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+33B text10 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+33C text10 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+340 text10 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+342 text10 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+348 text10 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+34D text10 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+350 text10 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+352 text10 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+356 text10 CODE >34:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+357 text9 CODE >187:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+35A text9 CODE >188:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+35D text9 CODE >188:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+362 text9 CODE >189:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+364 text9 CODE >190:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+37F text9 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+38C text9 CODE >191:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+39A text9 CODE >192:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+39C text9 CODE >192:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3A5 text9 CODE >192:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3A9 text9 CODE >192:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3AD text9 CODE >193:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+4DD text8 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4DD text8 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4E1 text8 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4E7 text8 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4E9 text8 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4EA text8 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4EB text8 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4EF text8 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4F1 text8 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4F5 text8 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4F9 text8 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4FA text8 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+4FE text8 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+500 text8 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+502 text8 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+506 text8 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+50A text8 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+50D text8 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+510 text8 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+511 text8 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+512 text8 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+516 text8 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+518 text8 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+51E text8 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+522 text8 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+566 text7 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+566 text7 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+56E text7 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+570 text7 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+571 text7 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+572 text7 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+576 text7 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+578 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+57C text7 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+580 text7 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+582 text7 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+586 text7 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+58A text7 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+58D text7 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+590 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+591 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+595 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+597 text7 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+59D text7 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+5A1 text7 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+20 text6 CODE >505:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+23 text6 CODE >550:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+27 text6 CODE >553:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+28 text6 CODE >555:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+2E text6 CODE >558:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+39 text6 CODE >559:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+3A text6 CODE >565:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+3B text6 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+4A text6 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+4F text6 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+52 text6 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+55 text6 CODE >848:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+58 text6 CODE >1285:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+64 text6 CODE >1287:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+68 text6 CODE >1288:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+6C text6 CODE >1289:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+6F text6 CODE >1289:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+71 text6 CODE >1331:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+73 text6 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+86 text6 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+8A text6 CODE >1332:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+8F text6 CODE >1333:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+99 text6 CODE >1464:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+9F text6 CODE >1465:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+AA text6 CODE >1498:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+AE text6 CODE >1500:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+AF text6 CODE >1515:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+DF text6 CODE >1550:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+EA text6 CODE >1500:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+F3 text6 CODE >553:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+105 text6 CODE >1564:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+109 text6 CODE >1567:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
+2A1 text5 CODE >179:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+2A1 text5 CODE >180:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+2AD text5 CODE >181:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+2CE text5 CODE >183:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+2DA text5 CODE >184:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+2FB text5 CODE >185:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3AE text4 CODE >195:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3B1 text4 CODE >196:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3B3 text4 CODE >197:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3D1 text4 CODE >198:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3DE text4 CODE >198:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3EB text4 CODE >199:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3ED text4 CODE >199:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3F6 text4 CODE >199:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3FA text4 CODE >199:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3FE text4 CODE >200:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+600 text3 CODE >202:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+600 text3 CODE >203:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+60C text3 CODE >204:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+62D text3 CODE >205:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+44C text2 CODE >71:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+44F text2 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+451 text2 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+45D text2 CODE >76:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+469 text2 CODE >78:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+474 text2 CODE >80:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+47C text2 CODE >82:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+482 text2 CODE >83:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+486 text2 CODE >81:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+48B text2 CODE >86:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+496 text2 CODE >89:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LCD.c
+3FF text1 CODE >122:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+3FF text1 CODE >125:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+403 text1 CODE >126:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+404 text1 CODE >128:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+408 text1 CODE >129:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+409 text1 CODE >130:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+40A text1 CODE >131:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+40B text1 CODE >132:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+40C text1 CODE >134:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+40F text1 CODE >135:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+410 text1 CODE >136:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+411 text1 CODE >137:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+412 text1 CODE >138:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+413 text1 CODE >141:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+419 text1 CODE >142:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+41A text1 CODE >145:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+41B text1 CODE >146:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+41C text1 CODE >147:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+41D text1 CODE >149:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+423 text1 CODE >150:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+425 text1 CODE >151:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+426 text1 CODE >152:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+42B text1 CODE >155:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+42E text1 CODE >156:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+431 text1 CODE >157:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+434 text1 CODE >158:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+437 text1 CODE >159:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+438 text1 CODE >160:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+439 text1 CODE >163:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+43A text1 CODE >164:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+43B text1 CODE >166:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+43E text1 CODE >168:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+442 text1 CODE >169:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+443 text1 CODE >171:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+446 text1 CODE >172:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+447 text1 CODE >173:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+448 text1 CODE >175:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+44B text1 CODE >177:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
 10A maintext CODE >86:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-10F maintext CODE >87:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-114 maintext CODE >88:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-119 maintext CODE >89:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-122 maintext CODE >90:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-12D maintext CODE >91:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-139 maintext CODE >92:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-144 maintext CODE >93:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-153 maintext CODE >94:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-156 maintext CODE >96:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-15B maintext CODE >99:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-160 maintext CODE >102:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-169 maintext CODE >103:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-174 maintext CODE >105:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-179 maintext CODE >107:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-182 maintext CODE >108:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-18D maintext CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-199 maintext CODE >110:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-1A4 maintext CODE >113:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-1A9 maintext CODE >115:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-1B5 maintext CODE >116:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
-661 clrtext CODE >982:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-661 clrtext CODE >983:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-662 clrtext CODE >984:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-662 clrtext CODE >985:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-663 clrtext CODE >986:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-664 clrtext CODE >987:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-665 clrtext CODE >988:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-666 clrtext CODE >989:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-667 clrtext CODE >990:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
-668 clrtext CODE >991:C:\Users\jocar\AppData\Local\Temp\xcAsdo8.s
+10A maintext CODE >87:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+10F maintext CODE >88:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+114 maintext CODE >89:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+119 maintext CODE >90:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+122 maintext CODE >91:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+12D maintext CODE >92:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+139 maintext CODE >93:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+144 maintext CODE >94:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+153 maintext CODE >95:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+156 maintext CODE >97:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+15B maintext CODE >100:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+160 maintext CODE >103:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+169 maintext CODE >104:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+174 maintext CODE >106:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+179 maintext CODE >108:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+182 maintext CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+18D maintext CODE >110:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+199 maintext CODE >111:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+1A4 maintext CODE >114:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+1A9 maintext CODE >116:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+1B5 maintext CODE >117:D:\Archivos\Documentos\Universidad y colegio\UVG\2022\Primer Semestre\Electrónica digital 2\Laboratorios\LAB2\PROYECTO MPLAB\LAB2.c
+6A2 clrtext CODE >995:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A2 clrtext CODE >996:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A3 clrtext CODE >997:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A3 clrtext CODE >998:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A4 clrtext CODE >999:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A5 clrtext CODE >1000:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A6 clrtext CODE >1001:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A7 clrtext CODE >1002:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A8 clrtext CODE >1003:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
+6A9 clrtext CODE >1004:C:\Users\jocar\AppData\Local\Temp\xcAs4oc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -457,23 +464,25 @@ F3 text5 CODE >553:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\d
 ___latbits 2 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 ___awdiv@counter 24 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 ___lwmod@counter 2B 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__Hspace_0 669 0 ABS 0 - -
+__Hspace_0 6AA 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __size_of_conversion_char 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
+__size_of_divisor1 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-_prender_ELCD CA6 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
-___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
+_prender_ELCD D28 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
+___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
 _dato 76 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _main 214 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 _vol1 6A 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 _vol2 69 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_vol3 68 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_Escribir_stringLCD 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
+start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -482,62 +491,67 @@ __size_of___lwmod 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 25 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
+divisor1@a 2C 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+divisor1@i 2D 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
+_divisor1 75C 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_prender_ELCD 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+__end_of_divisor1 7FE 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
 ___awdiv@sign 25 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __size_of_set_cursor 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 ___awdiv@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_prender_ELCD CC2 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
-_divisor 6AE 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_prender_ELCD D44 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
+_divisor 6AE 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
 _Cont_U 47 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_sprintf 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 ___awdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 ___lwmod@divisor 27 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of___awdiv 542 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of___awmod 6AE 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of___lwdiv 918 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of___lwmod AF6 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
-___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-_dpowers A20 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__end_of___awdiv 542 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of___awmod 6AE 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of___lwdiv A46 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of___lwmod B44 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
+___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+_dpowers 94E 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 set_cursor@linea 23 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 ___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_Iniciar_LCD 470 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_Iniciar_LCD 470 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
 ___lwmod@dividend 29 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
-clear_ram0 CC2 0 CODE 0 clrtext dist/default/production\PROYECTO_MPLAB.production.o
+clear_ram0 D44 0 CODE 0 clrtext dist/default/production\PROYECTO_MPLAB.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
+divisor1@dig 75 0 COMMON 1 cstackCOMMON dist/default/production\PROYECTO_MPLAB.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 40 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase A1E 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__stringbase 94C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 ___lwdiv@counter 24 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __size_of_Limpiar_pantallaLCD 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_sprintf 214 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_sprintf 214 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
-_conversion BB2 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
+_conversion C5C 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -568,23 +582,23 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ADC C0A 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
-__S0 669 0 ABS 0 - -
+_ADC CB4 0 CODE 0 text19 dist/default/production\PROYECTO_MPLAB.production.o
+__S0 6AA 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr B54 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
+_isr BA2 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_Escribir_comandoLCD 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-_dato_recibido C7E 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+_dato_recibido C00 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-_Limpiar_pantallaLCD C46 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
+_Limpiar_pantallaLCD CF0 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
 sprintf@val 39 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_ADC C46 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_isr BB2 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_ADC CF0 0 CODE 0 text19 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_isr C00 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab A00 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAsdo8.o
-__end_of_conversion C0A 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
+__stringtab 92E 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAs4oc.o
+__end_of_conversion CB4 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_Iniciar_LCD 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@counter 24 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
@@ -593,21 +607,22 @@ _PIE1bits 8C 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 sprintf@flag 37 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 sprintf@prec 38 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 Escribir_comandoLCD@Comando 75 0 COMMON 1 cstackCOMMON dist/default/production\PROYECTO_MPLAB.production.o
-__ptext10 470 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext11 BB2 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext12 C46 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext13 388 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext14 AF6 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext15 918 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext16 CA6 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext17 B54 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext18 C0A 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
-_Escribir_comandoLCD 918 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
-___awdiv 470 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
-___awmod 5F8 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_Escribir_stringLCD B54 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
-___lwdiv 88C 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
-___lwmod A7E 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext10 5F8 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext11 470 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext12 C5C 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext13 CF0 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext14 388 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext15 B44 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext16 A46 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext17 D28 0 CODE 0 text17 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext18 BA2 0 CODE 0 text18 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext19 CB4 0 CODE 0 text19 dist/default/production\PROYECTO_MPLAB.production.o
+_Escribir_comandoLCD A46 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
+___awdiv 470 0 CODE 0 text11 dist/default/production\PROYECTO_MPLAB.production.o
+___awmod 5F8 0 CODE 0 text10 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_Escribir_stringLCD BA2 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
+___lwdiv 9BA 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
+___lwmod ACC 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
 __pmaintext 214 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -615,8 +630,8 @@ ___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB
 __size_of_divisor 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of__stringtab A20 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-_Escribir_stringLCD AF6 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of__stringtab 94E 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+_Escribir_stringLCD B44 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -624,18 +639,18 @@ __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
 __pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_dato_recibido 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_conversion_char 5F8 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_conversion_char 5F8 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Lend_init 18 0 CODE 0 end_init -
-_buffer1 5F 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-_buffer2 55 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-_buffer3 4B 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_buffer1 5E 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_buffer2 54 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_buffer3 4A 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_Limpiar_pantallaLCD C7E 0 CODE 0 text12 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_Limpiar_pantallaLCD D28 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
 end_of_initialization 38 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 __Hintentry 18 0 CODE 0 intentry -
-_set_cursor 7F6 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+_set_cursor 898 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
 __Lstrings 0 0 ABS 0 strings -
 ___awdiv@quotient 26 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 ?___awdiv 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
@@ -647,33 +662,33 @@ __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 set_cursor@posicion 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext1 75C 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext2 7F6 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext3 C7E 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext4 542 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext5 40 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext6 A7E 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext7 88C 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext8 6AE 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext9 5F8 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_dato_recibido CA6 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
-_sprintf 40 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext1 7FE 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext2 898 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext3 C00 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext4 75C 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext5 542 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext6 40 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext7 ACC 0 CODE 0 text7 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext8 9BA 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext9 6AE 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_dato_recibido C5C 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+_sprintf 40 0 CODE 0 text6 dist/default/production\PROYECTO_MPLAB.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 sprintf@ap 36 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 sprintf@sp 3B 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_Escribir_comandoLCD 99E 0 CODE 0 text15 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_Escribir_comandoLCD ACC 0 CODE 0 text16 dist/default/production\PROYECTO_MPLAB.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 divisor@a 2A 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 divisor@b 2B 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 divisor@i 2D 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-_conversion_char 542 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
+_conversion_char 542 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
 __end_of__initialization 38 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 ___awmod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__end_of_divisor 75C 0 CODE 0 text8 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_divisor 75C 0 CODE 0 text9 dist/default/production\PROYECTO_MPLAB.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__end_of_set_cursor 88C 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_set_cursor 92E 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_conversion 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -682,9 +697,9 @@ __Hend_init 1E 0 CODE 0 end_init -
 sprintf@c 3C 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 sprintf@f 2C 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __end_of_main 388 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
-_Iniciar_LCD 388 0 CODE 0 text13 dist/default/production\PROYECTO_MPLAB.production.o
+_Iniciar_LCD 388 0 CODE 0 text14 dist/default/production\PROYECTO_MPLAB.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_dpowers A34 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_dpowers 962 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 ?_sprintf 2C 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -698,19 +713,19 @@ _TRISB 86 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_setup 7F6 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_setup 898 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_cont1 4A 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-_cont2 49 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_cont1 49 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
+_cont2 48 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 interrupt_function 8 0 CODE 0 intentry dist/default/production\PROYECTO_MPLAB.production.o
-_setup 75C 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+_setup 7FE 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_ADC 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 __pbssBANK0 47 0 BANK0 1 bssBANK0 dist/default/production\PROYECTO_MPLAB.production.o
-__pstrings A00 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__pstrings 92E 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -736,12 +751,12 @@ __pstrings A00 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.product
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text6 0 53F A7E 12A 2
+text8 0 4DD 9BA 1CD 2
 cstackCOMMON 1 70 70 A 1
 cstackBANK0 1 20 20 4B 1
-intentry 0 4 8 4CB 2
+intentry 0 4 8 493 2
 reset_vec 0 0 0 3 2
-strings 0 500 A00 3F 2
+strings 0 497 92E 46 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

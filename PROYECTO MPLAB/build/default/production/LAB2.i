@@ -2907,7 +2907,7 @@ char buffer2[10];
 char buffer3[10];
 char vol1[];
 char vol2[];
-char vol3 = 0;
+char vol3[];
 uint8_t dato = 0;
 uint8_t Cont_U = 0;
 
@@ -2916,6 +2916,7 @@ void setup(void);
 void conversion_char(void);
 void divisor(uint8_t a, char dig[]);
 void dato_recibido(void);
+void divisor1(uint8_t a, char dig[]);
 
 
 
@@ -3049,6 +3050,14 @@ void divisor(uint8_t a, char dig[]){
     }
 }
 
+void divisor1(uint8_t a, char dig[]){
+    for(int i = 0; i<3 ; i++){
+        dig[i] = a % 10;
+        a = (a - dig[i])/10;
+    }
+}
+
 void dato_recibido(void){
-    sprintf(buffer3, "%d", Cont_U);
+    divisor1(Cont_U, vol3);
+    sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);
 }

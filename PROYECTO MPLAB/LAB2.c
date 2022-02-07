@@ -49,7 +49,7 @@ char buffer2[10];
 char buffer3[10];
 char vol1[];
 char vol2[];
-char vol3 = 0;
+char vol3[];
 uint8_t dato = 0;
 uint8_t Cont_U = 0;
 
@@ -58,6 +58,7 @@ void setup(void);                                   // Función de setup
 void conversion_char(void);                         // Función para convertir valores a caracteres
 void divisor(uint8_t a, char dig[]);                // Función para dividir valores en dígitos y guardarlos en array
 void dato_recibido(void);
+void divisor1(uint8_t a, char dig[]);
 
 
 //-------------Funciones que retornan variables-----------------------
@@ -191,6 +192,14 @@ void divisor(uint8_t a, char dig[]){
     }
 }
 
+void divisor1(uint8_t a, char dig[]){
+    for(int i = 0; i<3 ; i++){                      // De i = 0 hasta i = 2
+        dig[i] = a % 10;                            // array[i] = cont_vol mod 10(retornar residuo). Devuelve digito por dígito de un número decimal.
+        a = (a - dig[i])/10;                        // b = valor sin último digito.
+    }
+}
+
 void dato_recibido(void){
-    sprintf(buffer3, "%d", Cont_U);                   //Convierte el dato cont2 a string
+    divisor1(Cont_U, vol3);
+    sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);                   //Convierte el dato cont2 a string
 }
