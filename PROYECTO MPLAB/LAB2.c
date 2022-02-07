@@ -37,7 +37,7 @@
 //---------------------Librearías creadas por usuario--------------------
 #include "LCD.h"
 #include "ADC.h"
-//#include "USART.h"
+#include "USART.h"
 
 //-----------------Definición de frecuencia de cristal---------------
 #define _XTAL_FREQ 4000000
@@ -72,10 +72,10 @@ void __interrupt() isr(void){
     }
     if(PIR1bits.RCIF){
         dato = RCREG;
-        if(dato == 75){
+        if(dato == 0x2B || dato == 77){
             Cont_U++;
         }
-        if(dato == 77){
+        if(dato == 0x2D || dato == 75){
             Cont_U--;
         }
         
@@ -143,14 +143,7 @@ void setup(void){
     OSCCONbits.SCS = 1;
     
     //Configuración del ADC
-    ADCON1bits.ADFM = 0;                            // Resultado justificado a la izquierda
-    ADCON1bits.VCFG0 = 0;                           // Voltaje 0 de referencia = VSS
-    ADCON1bits.VCFG1 = 0;                           // Voltaje 1 de referencia = VDD
-    
-    ADCON0bits.ADCS = 0b01;                         // Conversión ADC generada a 2us
-    ADCON0bits.CHS = 0;                       // Input Channel = AN0
-    ADCON0bits.ADON = 1;                            // ADC = enabled
-    __delay_us(50);
+    config_ADC(0);
     
     //Configuración de interrupciones
     PIR1bits.ADIF = 0;                              // Limpiar bandera de interrupción del ADC
@@ -164,9 +157,9 @@ void setup(void){
     TXSTAbits.SYNC = 0;                             // Transmisión asíncrona
     TXSTAbits.BRGH = 1;                             // Baud rate a velocidad baja
     
-    BAUDCTLbits.BRG16 = 1;                          // Baud rate de 16 bits
+    BAUDCTLbits.BRG16 = 0;                          // Baud rate de 16 bits
     
-    SPBRG = 23;                                     // SPBRG:SPBRGH = 25
+    SPBRG = 25;                                     // SPBRG:SPBRGH = 25
     SPBRGH = 0;
     
     RCSTAbits.SPEN = 1;                                 // Puertos seriales habilitados

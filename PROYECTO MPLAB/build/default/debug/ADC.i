@@ -1,4 +1,4 @@
-# 1 "LAB2.c"
+# 1 "ADC.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,22 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "LAB2.c" 2
-# 11 "LAB2.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
+# 1 "ADC.c" 2
 
 
 
@@ -29,6 +14,9 @@
 
 
 
+
+# 1 "./ADC.h" 1
+# 38 "./ADC.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2509,7 +2497,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 31 "LAB2.c" 2
+# 38 "./ADC.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
@@ -2644,7 +2633,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 32 "LAB2.c" 2
+# 40 "./ADC.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2743,143 +2732,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 33 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
-
-
-
-
-
-
-typedef unsigned short wchar_t;
-
-
-
-
-
-
-
-typedef struct {
- int rem;
- int quot;
-} div_t;
-typedef struct {
- unsigned rem;
- unsigned quot;
-} udiv_t;
-typedef struct {
- long quot;
- long rem;
-} ldiv_t;
-typedef struct {
- unsigned long quot;
- unsigned long rem;
-} uldiv_t;
-# 65 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-
-
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-
-
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-# 104 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-# 34 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
-# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-# 35 "LAB2.c" 2
-
-
-
-# 1 "./LCD.h" 1
-# 59 "./LCD.h"
-void Escribir_comandoLCD(unsigned char);
-void Escribir_datosLCD(char);
-void Iniciar_LCD(void);
-void Escribir_stringLCD(const char*);
-void Limpiar_pantallaLCD(void);
-void prender_ELCD(void);
-void set_cursor(char linea, char posicion);
-# 38 "LAB2.c" 2
-
-# 1 "./ADC.h" 1
-# 40 "./ADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 40 "./ADC.h" 2
+# 41 "./ADC.h" 2
 # 53 "./ADC.h"
 uint8_t cont1 = 0;
 uint8_t cont2 = 0;
@@ -2891,171 +2744,41 @@ uint8_t cen = 0;
 void ADC(void);
 void conversion(void);
 void config_ADC(int channel);
-# 39 "LAB2.c" 2
-
-# 1 "./USART.h" 1
-# 32 "./USART.h"
-void Config_USART(int baud_rate, int Freq);
-void Recibir_dato(int dato);
-void Mandar_dato(int dato);
-# 40 "LAB2.c" 2
+# 9 "ADC.c" 2
 
 
-
-
-
-
-
-
-char buffer1[10];
-char buffer2[10];
-char buffer3[10];
-char vol1[];
-char vol2[];
-char vol3[];
-uint8_t dato = 0;
-uint8_t Cont_U = 0;
-
-
-void setup(void);
-void conversion_char(void);
-void divisor(uint8_t a, char dig[]);
-void dato_recibido(void);
-void divisor1(uint8_t a, char dig[]);
-
-
-
-
-
-void __attribute__((picinterrupt(("")))) isr(void){
-    if(PIR1bits.ADIF){
-        ADC();
-        PIR1bits.ADIF = 0;
+void ADC(void) {
+    if(ADCON0bits.CHS == 0){
+        cont1 = ADRESH;
     }
-    if(PIR1bits.RCIF){
-        dato = RCREG;
-        if(dato == 0x2B || dato == 77){
-            Cont_U++;
+    else if(ADCON0bits.CHS == 1){
+        cont2 = ADRESH;
+    }
+
+}
+
+void conversion(void){
+    if(ADCON0bits.GO == 0){
+        if(ADCON0bits.CHS == 1){
+            ADCON0bits.CHS = 0;
+            _delay((unsigned long)((50)*(8000000/4000000.0)));
         }
-        if(dato == 0x2D || dato == 75){
-            Cont_U--;
+        else if(ADCON0bits.CHS == 0){
+            ADCON0bits.CHS = 1;
+            _delay((unsigned long)((50)*(8000000/4000000.0)));
         }
-
-    }
-
-}
-
-
-void main(void) {
-    setup();
-    Iniciar_LCD();
-    Limpiar_pantallaLCD();
-    set_cursor(1,0);
-    Escribir_stringLCD("Hola");
-    set_cursor(2,2);
-    Escribir_stringLCD("Jose Santizo");
-    _delay((unsigned long)((5000)*(4000000/4000.0)));
-    ADCON0bits.GO = 1;
-
-    Limpiar_pantallaLCD();
-    while(1){
-
-        conversion();
-
-
-        set_cursor(1,0);
-        Escribir_stringLCD("S1:    S2:   S3:");
-
-        conversion_char();
-
-        set_cursor(2,0);
-        Escribir_stringLCD(buffer1);
-        set_cursor(2,7);
-        Escribir_stringLCD(buffer2);
-
-
-        dato_recibido();
-
-        set_cursor(2,13);
-        Escribir_stringLCD(buffer3);
+        _delay((unsigned long)((50)*(8000000/4000000.0)));
+        ADCON0bits.GO = 1;
     }
 }
 
+void config_ADC(int channel){
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
 
-void setup(void){
-
-
-    ANSEL = 0b0011;
-    ANSELH = 0;
-
-    TRISA = 0b0011;
-    TRISB = 0;
-    TRISD = 0;
-    TRISC = 0;
-    TRISE = 0;
-
-    PORTA = 0;
-    PORTD = 0;
-    PORTC = 0;
-    PORTE = 0;
-    PORTB = 0;
-
-
-    OSCCONbits.IRCF = 0b0110;
-    OSCCONbits.SCS = 1;
-
-
-    config_ADC(0);
-
-
-    PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 1;
-    PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-
-
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-
-    BAUDCTLbits.BRG16 = 0;
-
-    SPBRG = 25;
-    SPBRGH = 0;
-
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TXEN = 1;
-
-}
-
-void conversion_char(void){
-    divisor(cont1, vol1);
-    sprintf(buffer1, "%d.%d%d", vol1[2], vol1[1], vol1[0]);
-
-    divisor(cont2, vol2);
-    sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);
-}
-
-void divisor(uint8_t a, char dig[]){
-    int b = 2*a;
-    for(int i = 0; i<3 ; i++){
-        dig[i] = b % 10;
-        b = (b - dig[i])/10;
-    }
-}
-
-void divisor1(uint8_t a, char dig[]){
-    for(int i = 0; i<3 ; i++){
-        dig[i] = a % 10;
-        a = (a - dig[i])/10;
-    }
-}
-
-void dato_recibido(void){
-    divisor1(Cont_U, vol3);
-    sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);
+    ADCON0bits.ADCS = 0b01;
+    ADCON0bits.CHS = channel;
+    ADCON0bits.ADON = 1;
+    _delay((unsigned long)((50)*(8000000/4000000.0)));
 }

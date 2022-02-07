@@ -1,4 +1,4 @@
-# 1 "LAB2.c"
+# 1 "LCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,22 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "LAB2.c" 2
-# 11 "LAB2.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
+# 1 "LCD.c" 2
 
 
 
@@ -29,6 +14,9 @@
 
 
 
+
+# 1 "./LCD.h" 1
+# 32 "./LCD.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2509,363 +2497,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 31 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
-
-
-
-
-
-
-typedef signed int int16_t;
-
-
-
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-# 32 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__size_t.h" 1 3
-
-
-
-typedef unsigned size_t;
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdarg.h" 1 3
-
-
-
-
-
-
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
-struct __prbuf
-{
- char * ptr;
- void (* func)(char);
-};
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 2 3
-
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-# 33 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
-
-
-
-
-
-
-typedef unsigned short wchar_t;
-
-
-
-
-
-
-
-typedef struct {
- int rem;
- int quot;
-} div_t;
-typedef struct {
- unsigned rem;
- unsigned quot;
-} udiv_t;
-typedef struct {
- long quot;
- long rem;
-} ldiv_t;
-typedef struct {
- unsigned long quot;
- unsigned long rem;
-} uldiv_t;
-# 65 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-
-
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-
-
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-# 104 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-# 34 "LAB2.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
-# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-# 35 "LAB2.c" 2
-
-
-
-# 1 "./LCD.h" 1
+# 32 "./LCD.h" 2
 # 59 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
@@ -2874,188 +2506,85 @@ void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
 void set_cursor(char linea, char posicion);
-# 38 "LAB2.c" 2
-
-# 1 "./ADC.h" 1
-# 40 "./ADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 40 "./ADC.h" 2
-# 53 "./ADC.h"
-uint8_t cont1 = 0;
-uint8_t cont2 = 0;
-uint8_t uni = 0;
-uint8_t dec = 0;
-uint8_t cen = 0;
+# 9 "LCD.c" 2
 
 
-void ADC(void);
-void conversion(void);
-void config_ADC(int channel);
-# 39 "LAB2.c" 2
+void prender_ELCD(void){
+    PORTDbits.RD5 = 1;
+    _delay((unsigned long)((500)*(8000000/4000000.0)));
+    PORTDbits.RD5 = 0;
+}
 
-# 1 "./USART.h" 1
-# 32 "./USART.h"
-void Config_USART(int baud_rate, int Freq);
-void Recibir_dato(int dato);
-void Mandar_dato(int dato);
-# 40 "LAB2.c" 2
+void Escribir_comandoLCD(unsigned char Comando){
+    if((Comando & 0b00000001) == 0b00000001){PORTDbits.RD6 = 1;} else {PORTDbits.RD6 = 0;}
+    if((Comando & 0b00000010) == 0b00000010){PORTDbits.RD7 = 1;} else {PORTDbits.RD7 = 0;}
+    if((Comando & 0b00000100) == 0b00000100){PORTBbits.RB0 = 1;} else {PORTBbits.RB0 = 0;}
+    if((Comando & 0b00001000) == 0b00001000){PORTBbits.RB1 = 1;} else {PORTBbits.RB1 = 0;}
+    if((Comando & 0b00010000) == 0b00010000){PORTBbits.RB2 = 1;} else {PORTBbits.RB2 = 0;}
+    if((Comando & 0b00100000) == 0b00100000){PORTBbits.RB3 = 1;} else {PORTBbits.RB3 = 0;}
+    if((Comando & 0b01000000) == 0b01000000){PORTBbits.RB4 = 1;} else {PORTBbits.RB4 = 0;}
+    if((Comando & 0b10000000) == 0b10000000){PORTBbits.RB5 = 1;} else {PORTBbits.RB5 = 0;}
 
+    prender_ELCD();
+}
 
+void Iniciar_LCD(void){
+    PORTCbits.RC5 = 0;
+    PORTDbits.RD4 = 0;
 
-
-
-
-
-
-char buffer1[10];
-char buffer2[10];
-char buffer3[10];
-char vol1[];
-char vol2[];
-char vol3[];
-uint8_t dato = 0;
-uint8_t Cont_U = 0;
-
-
-void setup(void);
-void conversion_char(void);
-void divisor(uint8_t a, char dig[]);
-void dato_recibido(void);
-void divisor1(uint8_t a, char dig[]);
+    _delay((unsigned long)((14)*(8000000/4000.0)));
+    Escribir_comandoLCD(0b00110000);
+    _delay((unsigned long)((4)*(8000000/4000.0)));
+    Escribir_comandoLCD(0b00110000);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00110000);
 
 
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00111000);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00001000);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00000001);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00000110);
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    Escribir_comandoLCD(0b00001100);
+    return;
+}
 
+void Escribir_stringLCD(const char *d){
+    PORTCbits.RC5 = 1; PORTDbits.RD4 = 0;
 
-
-void __attribute__((picinterrupt(("")))) isr(void){
-    if(PIR1bits.ADIF){
-        ADC();
-        PIR1bits.ADIF = 0;
+    for (char i=0; d[i]!='\0'; i++){
+        Escribir_comandoLCD(d[i]);
     }
-    if(PIR1bits.RCIF){
-        dato = RCREG;
-        if(dato == 0x2B || dato == 77){
-            Cont_U++;
+}
+
+void Limpiar_pantallaLCD(void){
+    PORTCbits.RC5 = 0; PORTDbits.RD4 = 0;
+
+    Escribir_comandoLCD(0b00000001);
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    Escribir_comandoLCD(0b00000010);
+}
+
+void set_cursor(char linea, char posicion){
+    PORTCbits.RC5 = 0; PORTDbits.RD4 = 0;
+
+
+    if (linea == 1){ Escribir_comandoLCD(0b10000000);}
+    else if (linea == 2){ Escribir_comandoLCD(0b11000000);}
+
+    _delay((unsigned long)((40)*(8000000/4000.0)));
+
+    if (posicion != 0){
+        while(posicion > 0){
+            Escribir_comandoLCD(0b00010100);
+            posicion--;
         }
-        if(dato == 0x2D || dato == 75){
-            Cont_U--;
-        }
 
+        _delay((unsigned long)((40)*(8000000/4000.0)));
     }
 
-}
-
-
-void main(void) {
-    setup();
-    Iniciar_LCD();
-    Limpiar_pantallaLCD();
-    set_cursor(1,0);
-    Escribir_stringLCD("Hola");
-    set_cursor(2,2);
-    Escribir_stringLCD("Jose Santizo");
-    _delay((unsigned long)((5000)*(4000000/4000.0)));
-    ADCON0bits.GO = 1;
-
-    Limpiar_pantallaLCD();
-    while(1){
-
-        conversion();
-
-
-        set_cursor(1,0);
-        Escribir_stringLCD("S1:    S2:   S3:");
-
-        conversion_char();
-
-        set_cursor(2,0);
-        Escribir_stringLCD(buffer1);
-        set_cursor(2,7);
-        Escribir_stringLCD(buffer2);
-
-
-        dato_recibido();
-
-        set_cursor(2,13);
-        Escribir_stringLCD(buffer3);
-    }
-}
-
-
-void setup(void){
-
-
-    ANSEL = 0b0011;
-    ANSELH = 0;
-
-    TRISA = 0b0011;
-    TRISB = 0;
-    TRISD = 0;
-    TRISC = 0;
-    TRISE = 0;
-
-    PORTA = 0;
-    PORTD = 0;
-    PORTC = 0;
-    PORTE = 0;
-    PORTB = 0;
-
-
-    OSCCONbits.IRCF = 0b0110;
-    OSCCONbits.SCS = 1;
-
-
-    config_ADC(0);
-
-
-    PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 1;
-    PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-
-
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-
-    BAUDCTLbits.BRG16 = 0;
-
-    SPBRG = 25;
-    SPBRGH = 0;
-
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TXEN = 1;
-
-}
-
-void conversion_char(void){
-    divisor(cont1, vol1);
-    sprintf(buffer1, "%d.%d%d", vol1[2], vol1[1], vol1[0]);
-
-    divisor(cont2, vol2);
-    sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);
-}
-
-void divisor(uint8_t a, char dig[]){
-    int b = 2*a;
-    for(int i = 0; i<3 ; i++){
-        dig[i] = b % 10;
-        b = (b - dig[i])/10;
-    }
-}
-
-void divisor1(uint8_t a, char dig[]){
-    for(int i = 0; i<3 ; i++){
-        dig[i] = a % 10;
-        a = (a - dig[i])/10;
-    }
-}
-
-void dato_recibido(void){
-    divisor1(Cont_U, vol3);
-    sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);
 }
