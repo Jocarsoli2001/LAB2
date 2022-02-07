@@ -143,7 +143,14 @@ void setup(void){
     OSCCONbits.SCS = 1;
     
     //Configuración del ADC
-    config_ADC(0);
+    ADCON1bits.ADFM = 0;                            // Resultado justificado a la izquierda
+    ADCON1bits.VCFG0 = 0;                           // Voltaje 0 de referencia = VSS
+    ADCON1bits.VCFG1 = 0;                           // Voltaje 1 de referencia = VDD
+    
+    ADCON0bits.ADCS = 0b01;                         // Conversión ADC generada a 2us
+    ADCON0bits.CHS = 0;                       // Input Channel = AN0
+    ADCON0bits.ADON = 1;                            // ADC = enabled
+    __delay_us(50);
     
     //Configuración de interrupciones
     PIR1bits.ADIF = 0;                              // Limpiar bandera de interrupción del ADC

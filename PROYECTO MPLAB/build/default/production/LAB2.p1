@@ -121,10 +121,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1882
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1882: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
 [v _OSCCONbits `VS69 ~T0 @X0 0 e@143 ]
-"62 ./ADC.h
-[; ;./ADC.h: 62: void config_ADC(int channel);
-[v _config_ADC `(v ~T0 @X0 0 ef1`i ]
-"1708 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"2983
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2983:     struct {
+[s S116 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S116 . . VCFG0 VCFG1 . ADFM ]
+"2982
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2982: typedef union {
+[u S115 `S116 1 ]
+[n S115 . . ]
+"2991
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2991: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
+[v _ADCON1bits `VS115 ~T0 @X0 0 e@159 ]
+"1708
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1708:     struct {
 [s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
@@ -723,93 +731,111 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB2.c: 143:     OSCCONbits.SCS = 1;
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
 "146
-[; ;LAB2.c: 146:     config_ADC(0);
-[e ( _config_ADC (1 -> 0 `i ]
-"149
-[; ;LAB2.c: 149:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;LAB2.c: 146:     ADCON1bits.ADFM = 0;
+[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
+"147
+[; ;LAB2.c: 147:     ADCON1bits.VCFG0 = 0;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"148
+[; ;LAB2.c: 148:     ADCON1bits.VCFG1 = 0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
 "150
-[; ;LAB2.c: 150:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+[; ;LAB2.c: 150:     ADCON0bits.ADCS = 0b01;
+[e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
 "151
-[; ;LAB2.c: 151:     PIR1bits.RCIF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;LAB2.c: 151:     ADCON0bits.CHS = 0;
+[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
 "152
-[; ;LAB2.c: 152:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;LAB2.c: 152:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "153
-[; ;LAB2.c: 153:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"154
-[; ;LAB2.c: 154:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;LAB2.c: 153:     _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"156
+[; ;LAB2.c: 156:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "157
-[; ;LAB2.c: 157:     TXSTAbits.SYNC = 0;
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;LAB2.c: 157:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "158
-[; ;LAB2.c: 158:     TXSTAbits.BRGH = 1;
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;LAB2.c: 158:     PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"159
+[; ;LAB2.c: 159:     PIE1bits.RCIE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 "160
-[; ;LAB2.c: 160:     BAUDCTLbits.BRG16 = 1;
-[e = . . _BAUDCTLbits 0 3 -> -> 1 `i `uc ]
-"162
-[; ;LAB2.c: 162:     SPBRG = 23;
-[e = _SPBRG -> -> 23 `i `uc ]
-"163
-[; ;LAB2.c: 163:     SPBRGH = 0;
-[e = _SPBRGH -> -> 0 `i `uc ]
+[; ;LAB2.c: 160:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"161
+[; ;LAB2.c: 161:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"164
+[; ;LAB2.c: 164:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
 "165
-[; ;LAB2.c: 165:     RCSTAbits.SPEN = 1;
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"166
-[; ;LAB2.c: 166:     RCSTAbits.RX9 = 0;
-[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;LAB2.c: 165:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
 "167
-[; ;LAB2.c: 167:     RCSTAbits.CREN = 1;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;LAB2.c: 167:     BAUDCTLbits.BRG16 = 1;
+[e = . . _BAUDCTLbits 0 3 -> -> 1 `i `uc ]
 "169
-[; ;LAB2.c: 169:     TXSTAbits.TXEN = 1;
+[; ;LAB2.c: 169:     SPBRG = 23;
+[e = _SPBRG -> -> 23 `i `uc ]
+"170
+[; ;LAB2.c: 170:     SPBRGH = 0;
+[e = _SPBRGH -> -> 0 `i `uc ]
+"172
+[; ;LAB2.c: 172:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"173
+[; ;LAB2.c: 173:     RCSTAbits.RX9 = 0;
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
+"174
+[; ;LAB2.c: 174:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"176
+[; ;LAB2.c: 176:     TXSTAbits.TXEN = 1;
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"171
-[; ;LAB2.c: 171: }
+"178
+[; ;LAB2.c: 178: }
 [e :UE 152 ]
 }
-"173
-[; ;LAB2.c: 173: void conversion_char(void){
+"180
+[; ;LAB2.c: 180: void conversion_char(void){
 [v _conversion_char `(v ~T0 @X0 1 ef ]
 {
 [e :U _conversion_char ]
 [f ]
-"174
-[; ;LAB2.c: 174:     divisor(cont1, vol1);
+"181
+[; ;LAB2.c: 181:     divisor(cont1, vol1);
 [e ( _divisor (2 , _cont1 &U _vol1 ]
-"175
-[; ;LAB2.c: 175:     sprintf(buffer1, "%d.%d%d", vol1[2], vol1[1], vol1[0]);
+"182
+[; ;LAB2.c: 182:     sprintf(buffer1, "%d.%d%d", vol1[2], vol1[1], vol1[0]);
 [e ( _sprintf (1 , , , (. , &U _buffer1 :s 4C -> *U + &U _vol1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _vol1 `ui `ux `i -> *U + &U _vol1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _vol1 `ui `ux `i -> *U + &U _vol1 * -> -> -> 0 `i `ui `ux -> -> # *U &U _vol1 `ui `ux `i ]
-"177
-[; ;LAB2.c: 177:     divisor(cont2, vol2);
+"184
+[; ;LAB2.c: 184:     divisor(cont2, vol2);
 [e ( _divisor (2 , _cont2 &U _vol2 ]
-"178
-[; ;LAB2.c: 178:     sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);
+"185
+[; ;LAB2.c: 185:     sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);
 [e ( _sprintf (1 , , , (. , &U _buffer2 :s 5C -> *U + &U _vol2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _vol2 `ui `ux `i -> *U + &U _vol2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _vol2 `ui `ux `i -> *U + &U _vol2 * -> -> -> 0 `i `ui `ux -> -> # *U &U _vol2 `ui `ux `i ]
-"179
-[; ;LAB2.c: 179: }
+"186
+[; ;LAB2.c: 186: }
 [e :UE 153 ]
 }
-"181
-[; ;LAB2.c: 181: void divisor(uint8_t a, char dig[]){
+"188
+[; ;LAB2.c: 188: void divisor(uint8_t a, char dig[]){
 [v _divisor `(v ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _divisor ]
 [v _a `uc ~T0 @X0 1 r1 ]
 [v _dig `*uc ~T0 @X0 1 r2 ]
 [f ]
-"182
-[; ;LAB2.c: 182:     int b = 2*a;
+"189
+[; ;LAB2.c: 189:     int b = 2*a;
 [v _b `i ~T0 @X0 1 a ]
 [e = _b * -> 2 `i -> _a `i ]
-"183
-[; ;LAB2.c: 183:     for(int i = 0; i<3 ; i++){
+"190
+[; ;LAB2.c: 190:     for(int i = 0; i<3 ; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -817,33 +843,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 156  ]
 [e :U 155 ]
 {
-"184
-[; ;LAB2.c: 184:         dig[i] = b % 10;
+"191
+[; ;LAB2.c: 191:         dig[i] = b % 10;
 [e = *U + _dig * -> _i `x -> -> # *U _dig `i `x -> % _b -> 10 `i `uc ]
-"185
-[; ;LAB2.c: 185:         b = (b - dig[i])/10;
+"192
+[; ;LAB2.c: 192:         b = (b - dig[i])/10;
 [e = _b / - _b -> *U + _dig * -> _i `x -> -> # *U _dig `i `x `i -> 10 `i ]
-"186
-[; ;LAB2.c: 186:     }
+"193
+[; ;LAB2.c: 193:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 155  ]
 [e :U 156 ]
 }
-"187
-[; ;LAB2.c: 187: }
+"194
+[; ;LAB2.c: 194: }
 [e :UE 154 ]
 }
-"189
-[; ;LAB2.c: 189: void divisor1(uint8_t a, char dig[]){
+"196
+[; ;LAB2.c: 196: void divisor1(uint8_t a, char dig[]){
 [v _divisor1 `(v ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _divisor1 ]
 [v _a `uc ~T0 @X0 1 r1 ]
 [v _dig `*uc ~T0 @X0 1 r2 ]
 [f ]
-"190
-[; ;LAB2.c: 190:     for(int i = 0; i<3 ; i++){
+"197
+[; ;LAB2.c: 197:     for(int i = 0; i<3 ; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -851,37 +877,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 160  ]
 [e :U 159 ]
 {
-"191
-[; ;LAB2.c: 191:         dig[i] = a % 10;
+"198
+[; ;LAB2.c: 198:         dig[i] = a % 10;
 [e = *U + _dig * -> _i `x -> -> # *U _dig `i `x -> % -> _a `i -> 10 `i `uc ]
-"192
-[; ;LAB2.c: 192:         a = (a - dig[i])/10;
+"199
+[; ;LAB2.c: 199:         a = (a - dig[i])/10;
 [e = _a -> / - -> _a `i -> *U + _dig * -> _i `x -> -> # *U _dig `i `x `i -> 10 `i `uc ]
-"193
-[; ;LAB2.c: 193:     }
+"200
+[; ;LAB2.c: 200:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 159  ]
 [e :U 160 ]
 }
-"194
-[; ;LAB2.c: 194: }
+"201
+[; ;LAB2.c: 201: }
 [e :UE 158 ]
 }
-"196
-[; ;LAB2.c: 196: void dato_recibido(void){
+"203
+[; ;LAB2.c: 203: void dato_recibido(void){
 [v _dato_recibido `(v ~T0 @X0 1 ef ]
 {
 [e :U _dato_recibido ]
 [f ]
-"197
-[; ;LAB2.c: 197:     divisor1(Cont_U, vol3);
+"204
+[; ;LAB2.c: 204:     divisor1(Cont_U, vol3);
 [e ( _divisor1 (2 , _Cont_U &U _vol3 ]
-"198
-[; ;LAB2.c: 198:     sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);
+"205
+[; ;LAB2.c: 205:     sprintf(buffer3, "%d%d%d", vol3[2], vol3[1], vol3[0]);
 [e ( _sprintf (1 , , , (. , &U _buffer3 :s 6C -> *U + &U _vol3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i -> *U + &U _vol3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i -> *U + &U _vol3 * -> -> -> 0 `i `ui `ux -> -> # *U &U _vol3 `ui `ux `i ]
-"199
-[; ;LAB2.c: 199: }
+"206
+[; ;LAB2.c: 206: }
 [e :UE 162 ]
 }
 [p f _sprintf 8388736 ]

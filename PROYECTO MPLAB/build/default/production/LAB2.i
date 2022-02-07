@@ -2991,7 +2991,14 @@ void setup(void){
     OSCCONbits.SCS = 1;
 
 
-    config_ADC(0);
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON0bits.ADCS = 0b01;
+    ADCON0bits.CHS = 0;
+    ADCON0bits.ADON = 1;
+    _delay((unsigned long)((50)*(4000000/4000000.0)));
 
 
     PIR1bits.ADIF = 0;
