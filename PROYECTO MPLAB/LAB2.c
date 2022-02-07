@@ -32,6 +32,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 //---------------------Librearías creadas por usuario--------------------
 #include "LCD.h"
@@ -83,18 +84,27 @@ void __interrupt() isr(void){
 //----------------------Main Loop--------------------------------
 void main(void) {
     setup();
+    Iniciar_LCD();                                    // Se inicializa la LCD en 8 bits
+    Limpiar_pantallaLCD();
+    set_cursor(1,0);
+    Escribir_stringLCD("Hola");
+    set_cursor(2,2);
+    Escribir_stringLCD("Teipio");
+    __delay_ms(5000);
     ADCON0bits.GO = 1;                              // Comenzar conversión ADC
+    
+    Limpiar_pantallaLCD();
     while(1){
         // ---------------------Conversión de ADC-------------------------------
         conversion();                               // Genera conversión de analógico a digital dependiendo del canal seleccionado
         
         // -------------------Mostrar valores en LCD----------------------------
-        set_cursor(1,1);                            // Setear cursor en 1,1 para la primera línea
+        set_cursor(1,0);                            // Setear cursor en 1,1 para la primera línea
         Escribir_stringLCD("S1:    S2:   S3:");     // Escribir menú en primera línea
         
         conversion_char();                          // Divide el valor de cont1 y cont2 en dígitos, los convierte a char y multiplica por 2 para verse como voltaje
         
-        set_cursor(2,1);                            // Setear cursor en segunda línea
+        set_cursor(2,0);                            // Setear cursor en segunda línea
         Escribir_stringLCD(buffer1);                // Escribir valor de primer potenciómetro en LCD
         set_cursor(2,7);                            // Setear cursor en segunda línea, espacio 7
         Escribir_stringLCD(buffer2);                // Escribir valor de segundo potenciómetro
@@ -102,7 +112,7 @@ void main(void) {
         // ---------------Mostrar valores de USART en LCD-----------------------
         dato_recibido();
         
-        set_cursor(2,14);
+        set_cursor(2,13);
         Escribir_stringLCD(buffer3);
     }
 }
@@ -116,9 +126,13 @@ void setup(void){
     
     TRISA = 0b0011;                                 // PORTA, bit 0 y 1 como entrada analógica
     TRISB = 0;                                      // PORTB como salida
+    TRISD = 0;
+    TRISC = 0;
     TRISE = 0;                                      // PORTE como salida
     
     PORTA = 0;                                      // Limpiar PORTA
+    PORTD = 0;
+    PORTC = 0;
     PORTE = 0;                                      // Limpiar PORTE
     PORTB = 0;                                      // Limpiar PORTB
     
@@ -142,7 +156,7 @@ void setup(void){
     PIR1bits.RCIF = 0;
     PIE1bits.RCIE = 1;
     INTCONbits.PEIE = 1;                            // Interrupciones periféricas activadas
-    INTCONbits.GIE = 1;                             // Habilitar interrupciones globales                        // Oscilador interno
+    INTCONbits.GIE = 1;                             // Habilitar interrupciones globales                        
     
     //Configuración de TX y RX
     TXSTAbits.SYNC = 0;                             // Transmisión asíncrona
@@ -158,10 +172,7 @@ void setup(void){
     RCSTAbits.CREN = 1;                             // Recepción continua habilitada
     
     TXSTAbits.TXEN = 1;                             // Transmisiones habilitadas
-
-    //Pantalla LCD
-    Iniciar_LCD();                                  // Se inicializa la LCD en 8 bits
-//    Limpiar_pantallaLCD();                          // Se limpia la pantalla LCD
+    
 }
 
 void conversion_char(void){

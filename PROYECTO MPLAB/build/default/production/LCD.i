@@ -16,7 +16,7 @@
 
 
 # 1 "./LCD.h" 1
-# 34 "./LCD.h"
+# 32 "./LCD.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2497,93 +2497,94 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 34 "./LCD.h" 2
-# 55 "./LCD.h"
+# 32 "./LCD.h" 2
+# 59 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);
 void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
-void set_cursor(char a, char b);
-void shift_right(void);
-void shift_left(void);
+void set_cursor(char linea, char posicion);
 # 9 "LCD.c" 2
 
 
 void prender_ELCD(void){
-    RC1 = 1;
+    PORTDbits.RD5 = 1;
     _delay((unsigned long)((500)*(8000000/4000000.0)));
-    RC1 = 0;
-    _delay((unsigned long)((500)*(8000000/4000000.0)));
+    PORTDbits.RD5 = 0;
 }
 
 void Escribir_comandoLCD(unsigned char Comando){
-    RC0 = 0;
-    PORTD = Comando;
-
-    prender_ELCD();
-}
-
-void Escribir_datosLCD(char LCDchar){
-    RC0 = 1;
-    PORTD = LCDchar;
+    if((Comando & 0b00000001) == 0b00000001){PORTDbits.RD6 = 1;} else {PORTDbits.RD6 = 0;}
+    if((Comando & 0b00000010) == 0b00000010){PORTDbits.RD7 = 1;} else {PORTDbits.RD7 = 0;}
+    if((Comando & 0b00000100) == 0b00000100){PORTBbits.RB0 = 1;} else {PORTBbits.RB0 = 0;}
+    if((Comando & 0b00001000) == 0b00001000){PORTBbits.RB1 = 1;} else {PORTBbits.RB1 = 0;}
+    if((Comando & 0b00010000) == 0b00010000){PORTBbits.RB2 = 1;} else {PORTBbits.RB2 = 0;}
+    if((Comando & 0b00100000) == 0b00100000){PORTBbits.RB3 = 1;} else {PORTBbits.RB3 = 0;}
+    if((Comando & 0b01000000) == 0b01000000){PORTBbits.RB4 = 1;} else {PORTBbits.RB4 = 0;}
+    if((Comando & 0b10000000) == 0b10000000){PORTBbits.RB5 = 1;} else {PORTBbits.RB5 = 0;}
 
     prender_ELCD();
 }
 
 void Iniciar_LCD(void){
-    RC0 = 0;
-    RC2 = 0;
+    PORTCbits.RC5 = 0;
+    PORTDbits.RD4 = 0;
 
     _delay((unsigned long)((14)*(8000000/4000.0)));
-    Escribir_datosLCD(0b00110000);
+    Escribir_comandoLCD(0b00110000);
     _delay((unsigned long)((4)*(8000000/4000.0)));
-    Escribir_datosLCD(0b00110000);
+    Escribir_comandoLCD(0b00110000);
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00110000);
+    Escribir_comandoLCD(0b00110000);
 
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00111000);
+    Escribir_comandoLCD(0b00111000);
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00001000);
+    Escribir_comandoLCD(0b00001000);
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00000001);
+    Escribir_comandoLCD(0b00000001);
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00000110);
+    Escribir_comandoLCD(0b00000110);
     _delay((unsigned long)((100)*(8000000/4000000.0)));
-    Escribir_datosLCD(0b00001100);
+    Escribir_comandoLCD(0b00001100);
     return;
 }
 
 void Escribir_stringLCD(const char *d){
-    while(*d){
-        Escribir_datosLCD(*d++);
+    PORTCbits.RC5 = 1; PORTDbits.RD4 = 0;
+
+    for (char i=0; d[i]!='\0'; i++){
+        Escribir_comandoLCD(d[i]);
     }
 }
 
 void Limpiar_pantallaLCD(void){
-    Escribir_comandoLCD(0x01);
-    _delay((unsigned long)((4)*(8000000/4000.0)));
+    PORTCbits.RC5 = 0; PORTDbits.RD4 = 0;
+
+    Escribir_comandoLCD(0b00000001);
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    Escribir_comandoLCD(0b00000010);
 }
 
-void set_cursor(char a, char b){
-    if(a == 1){
-        Escribir_comandoLCD(0x80 + (b-1));
+void set_cursor(char linea, char posicion){
+    PORTCbits.RC5 = 0; PORTDbits.RD4 = 0;
+
+
+    if (linea == 1){ Escribir_comandoLCD(0b10000000);}
+    else if (linea == 2){ Escribir_comandoLCD(0b11000000);}
+
+    _delay((unsigned long)((40)*(8000000/4000.0)));
+
+    if (posicion != 0){
+        while(posicion > 0){
+            Escribir_comandoLCD(0b00010100);
+            posicion--;
+        }
+
+        _delay((unsigned long)((40)*(8000000/4000.0)));
     }
-    if(a == 2){
-        Escribir_comandoLCD(0xC0 + (b-1));
-    }
 
-}
-
-void shift_right(void){
-    Escribir_comandoLCD(0x01);
-    Escribir_comandoLCD(0x0C);
-}
-
-void shift_left(void){
-    Escribir_comandoLCD(0x01);
-    Escribir_comandoLCD(0x08);
 }

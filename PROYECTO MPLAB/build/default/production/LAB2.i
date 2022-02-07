@@ -2830,20 +2830,51 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 extern char * ftoa(float f, int * status);
 # 34 "LAB2.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 35 "LAB2.c" 2
+
 
 
 # 1 "./LCD.h" 1
-# 55 "./LCD.h"
+# 59 "./LCD.h"
 void Escribir_comandoLCD(unsigned char);
 void Escribir_datosLCD(char);
 void Iniciar_LCD(void);
 void Escribir_stringLCD(const char*);
 void Limpiar_pantallaLCD(void);
 void prender_ELCD(void);
-void set_cursor(char a, char b);
-void shift_right(void);
-void shift_left(void);
-# 37 "LAB2.c" 2
+void set_cursor(char linea, char posicion);
+# 38 "LAB2.c" 2
 
 # 1 "./ADC.h" 1
 # 40 "./ADC.h"
@@ -2862,7 +2893,7 @@ uint8_t cen = 0;
 
 void ADC(void);
 void conversion(void);
-# 38 "LAB2.c" 2
+# 39 "LAB2.c" 2
 
 
 
@@ -2911,18 +2942,27 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void main(void) {
     setup();
+    Iniciar_LCD();
+    Limpiar_pantallaLCD();
+    set_cursor(1,0);
+    Escribir_stringLCD("Hola");
+    set_cursor(2,2);
+    Escribir_stringLCD("Teipio");
+    _delay((unsigned long)((5000)*(4000000/4000.0)));
     ADCON0bits.GO = 1;
+
+    Limpiar_pantallaLCD();
     while(1){
 
         conversion();
 
 
-        set_cursor(1,1);
+        set_cursor(1,0);
         Escribir_stringLCD("S1:    S2:   S3:");
 
         conversion_char();
 
-        set_cursor(2,1);
+        set_cursor(2,0);
         Escribir_stringLCD(buffer1);
         set_cursor(2,7);
         Escribir_stringLCD(buffer2);
@@ -2930,7 +2970,7 @@ void main(void) {
 
         dato_recibido();
 
-        set_cursor(2,14);
+        set_cursor(2,13);
         Escribir_stringLCD(buffer3);
     }
 }
@@ -2944,9 +2984,13 @@ void setup(void){
 
     TRISA = 0b0011;
     TRISB = 0;
+    TRISD = 0;
+    TRISC = 0;
     TRISE = 0;
 
     PORTA = 0;
+    PORTD = 0;
+    PORTC = 0;
     PORTE = 0;
     PORTB = 0;
 
@@ -2986,9 +3030,6 @@ void setup(void){
     RCSTAbits.CREN = 1;
 
     TXSTAbits.TXEN = 1;
-
-
-    Iniciar_LCD();
 
 }
 
