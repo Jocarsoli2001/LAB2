@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>LCD.h</itemPath>
       <itemPath>ADC.h</itemPath>
+      <itemPath>PIC16F887_Lib.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -24,6 +25,10 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../../../../../../../../Descargas</Elem>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

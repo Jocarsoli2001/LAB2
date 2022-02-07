@@ -2832,18 +2832,6 @@ extern char * ftoa(float f, int * status);
 
 
 
-# 1 "./LCD.h" 1
-# 55 "./LCD.h"
-void Escribir_comandoLCD(unsigned char);
-void Escribir_datosLCD(char);
-void Iniciar_LCD(void);
-void Escribir_stringLCD(const char*);
-void Limpiar_pantallaLCD(void);
-void prender_ELCD(void);
-void set_cursor(char a, char b);
-void shift_right(void);
-void shift_left(void);
-# 37 "LAB2.c" 2
 
 # 1 "./ADC.h" 1
 # 40 "./ADC.h"
@@ -2863,6 +2851,107 @@ uint8_t cen = 0;
 void ADC(void);
 void conversion(void);
 # 38 "LAB2.c" 2
+
+# 1 "./PIC16F887_Lib.h" 1
+
+
+void PORTOut(char);
+# 24 "./PIC16F887_Lib.h"
+void InitLCD(char Lineas, char Alto){
+    RC0 = 0; RC3 = 0;
+    _delay((unsigned long)((14)*(8000000/4000.0)));
+    PORTOut(0b00110000);
+
+    _delay((unsigned long)((4)*(8000000/4000.0)));
+    PORTOut(0b00110000);
+
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+    PORTOut(0b00110000);
+
+
+    if (Lineas == 1 && Alto == 8){ PORTOut(0b00110000);}
+    else if (Lineas == 2 && Alto == 11){ PORTOut(0b00111100);}
+    else if (Lineas == 1 && Alto == 11){ PORTOut(0b00110100);}
+    else if (Lineas == 2 && Alto == 8){ PORTOut(0b00111000);}
+
+    PORTOut(0b00001000);
+    PORTOut(0b00000001);
+
+
+
+
+    PORTOut(0b00000110);
+
+    PORTOut(0b00001100);
+}
+# 68 "./PIC16F887_Lib.h"
+void MoveCursor(char Linea, char Posiciones, char Direccion){
+    RC0 = 0; RC3 = 0;
+
+
+    if (Linea == 1){ PORTOut(0b10000000);}
+    else if (Linea == 2){ PORTOut(0b11000000);}
+
+    _delay((unsigned long)((40)*(8000000/4000.0)));
+
+
+    if (Posiciones != 0){
+
+
+        if (Direccion == 1){
+            while(Posiciones > 0){
+                PORTOut(0b00010100);
+                Posiciones--;
+            }
+        }
+
+
+        else if(Direccion == 0){
+            while(Posiciones > 0){
+                PORTOut(0b00010000);
+                Posiciones--;
+            }
+        }
+
+        _delay((unsigned long)((40)*(8000000/4000.0)));
+    }
+
+}
+
+
+void WriteCharLCD(char *Caracter){
+
+    RC0 = 1; RC3 = 0;
+
+
+    for (char i=0; Caracter[i]!='\0'; i++){
+        PORTOut(Caracter[i]);
+    }
+}
+# 157 "./PIC16F887_Lib.h"
+void PORTOut(char Out){
+    if((Out & 0b00000001) == 0b00000001) { PORTBbits.RB0 = 1; } else { PORTBbits.RB0 = 0; }
+    if((Out & 0b00000010) == 0b00000010) { PORTBbits.RB1 = 1; } else { PORTBbits.RB1 = 0; }
+    if((Out & 0b00000100) == 0b00000100) { PORTBbits.RB2 = 1; } else { PORTBbits.RB2 = 0; }
+    if((Out & 0b00001000) == 0b00001000) { PORTBbits.RB3 = 1; } else { PORTBbits.RB3 = 0; }
+    if((Out & 0b00010000) == 0b00010000) { PORTBbits.RB4 = 1; } else { PORTBbits.RB4 = 0; }
+    if((Out & 0b00100000) == 0b00100000) { PORTBbits.RB5 = 1; } else { PORTBbits.RB5 = 0; }
+    if((Out & 0b01000000) == 0b01000000) { PORTBbits.RB6 = 1; } else { PORTBbits.RB6 = 0; }
+    if((Out & 0b10000000) == 0b10000000) { PORTBbits.RB7 = 1; } else { PORTBbits.RB7 = 0; }
+
+    RC1 = 1;
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    RC1 = 0;
+}
+
+
+void ResetLCD(){
+    RC0 = 0; RC3 = 0;
+    PORTOut(0b00000001);
+    _delay((unsigned long)((10)*(8000000/4000.0)));
+    PORTOut(0b00000010);
+}
+# 39 "LAB2.c" 2
 
 
 
@@ -2891,47 +2980,26 @@ void dato_recibido(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-    if(PIR1bits.ADIF){
-        ADC();
-        PIR1bits.ADIF = 0;
-    }
-    if(PIR1bits.RCIF){
-        dato = RCREG;
-        if(dato == 75){
-            Cont_U++;
-        }
-        if(dato == 77){
-            Cont_U--;
-        }
-
-    }
-
+# 82 "LAB2.c"
 }
 
 
 void main(void) {
     setup();
-    ADCON0bits.GO = 1;
+
+
+    InitLCD(2,11);
+    MoveCursor(1,0,1);
+    WriteCharLCD("Eduardo Andres");
+    MoveCursor(2,1,1);
+    WriteCharLCD("Santizo Olivet");
+    _delay((unsigned long)((5000)*(4000000/4000.0)));
+
+    ResetLCD();
+    WriteCharLCD("Voltaje:");
+
     while(1){
-
-        conversion();
-
-
-        set_cursor(1,1);
-        Escribir_stringLCD("S1:    S2:   S3:");
-
-        conversion_char();
-
-        set_cursor(2,1);
-        Escribir_stringLCD(buffer1);
-        set_cursor(2,7);
-        Escribir_stringLCD(buffer2);
-
-
-        dato_recibido();
-
-        set_cursor(2,14);
-        Escribir_stringLCD(buffer3);
+# 119 "LAB2.c"
     }
 }
 
@@ -2953,61 +3021,5 @@ void setup(void){
 
     OSCCONbits.IRCF = 0b0110;
     OSCCONbits.SCS = 1;
-
-
-    ADCON1bits.ADFM = 0;
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-    ADCON0bits.ADCS = 0b01;
-    ADCON0bits.CHS = 0;
-    ADCON0bits.ADON = 1;
-    _delay((unsigned long)((50)*(4000000/4000000.0)));
-
-
-    PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 1;
-    PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-
-
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-
-    BAUDCTLbits.BRG16 = 0;
-
-    SPBRG = 23;
-    SPBRGH = 0;
-
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TXEN = 1;
-
-
-    Iniciar_LCD();
-
-}
-
-void conversion_char(void){
-    divisor(cont1, vol1);
-    sprintf(buffer1, "%d.%d%d", vol1[2], vol1[1], vol1[0]);
-
-    divisor(cont2, vol2);
-    sprintf(buffer2, "%d.%d%d", vol2[2], vol2[1], vol2[0]);
-}
-
-void divisor(uint8_t a, char dig[]){
-    int b = 2*a;
-    for(int i = 0; i<3 ; i++){
-        dig[i] = b % 10;
-        b = (b - dig[i])/10;
-    }
-}
-
-void dato_recibido(void){
-    sprintf(buffer3, "%d", Cont_U);
+# 176 "LAB2.c"
 }

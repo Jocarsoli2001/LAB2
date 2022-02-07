@@ -1,4 +1,4 @@
 build/default/production/LAB2.p1:  \
 LAB2.c  \
-LCD.h  \
-ADC.h 
+ADC.h  \
+PIC16F887_Lib.h 
