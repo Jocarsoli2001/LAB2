@@ -2733,9 +2733,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 41 "./ADC.h" 2
-
-
-
+# 53 "./ADC.h"
 uint8_t cont1 = 0;
 uint8_t cont2 = 0;
 uint8_t uni = 0;
@@ -2745,6 +2743,7 @@ uint8_t cen = 0;
 
 void ADC(void);
 void conversion(void);
+void config_ADC(int channel);
 # 9 "ADC.c" 2
 
 
@@ -2771,4 +2770,15 @@ void conversion(void){
         _delay((unsigned long)((50)*(8000000/4000000.0)));
         ADCON0bits.GO = 1;
     }
+}
+
+void config_ADC(int channel){
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON0bits.ADCS = 0b01;
+    ADCON0bits.CHS = channel;
+    ADCON0bits.ADON = 1;
+    _delay((unsigned long)((50)*(8000000/4000000.0)));
 }

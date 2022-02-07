@@ -26,40 +26,11 @@
  * Revision history: 
  */
 
-// This is a guard condition so that contents of this file are not included
-// more than once.  
-#ifndef ADC_H
-#define	ADC_H
-
-#ifndef _XTAL_FREQ
-#define _XTAL_FREQ 8000000
-#endif
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-#include <stdint.h>
-#include <stdio.h>
+void Config_USART(int baud_rate, int Freq);
+void Recibir_dato(int dato);
+void Mandar_dato(int dato);
 
-#define CH0 0
-#define CH1 1
-#define CH2 2
-#define CH3 3
-#define CH4 4
-#define CH5 5
-#define CH6 6
-#define CH7 7
-
-//-------------------------Variables-----------------------------------------------
-uint8_t cont1 = 0;
-uint8_t cont2 = 0;
-uint8_t uni = 0;
-uint8_t dec = 0;
-uint8_t cen = 0;
-
-//-------------------------Función para obtener valor de ADC-----------------------
-void ADC(void);                         // Función para extraer valor de POT
-void conversion(void);
-void config_ADC(int channel);
-
-#endif	/* XC_HEADER_TEMPLATE_H */
 

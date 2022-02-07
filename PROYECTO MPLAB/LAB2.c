@@ -37,6 +37,7 @@
 //---------------------Librearías creadas por usuario--------------------
 #include "LCD.h"
 #include "ADC.h"
+//#include "USART.h"
 
 //-----------------Definición de frecuencia de cristal---------------
 #define _XTAL_FREQ 4000000
@@ -90,7 +91,7 @@ void main(void) {
     set_cursor(1,0);
     Escribir_stringLCD("Hola");
     set_cursor(2,2);
-    Escribir_stringLCD("Teipio");
+    Escribir_stringLCD("Jose Santizo");
     __delay_ms(5000);
     ADCON0bits.GO = 1;                              // Comenzar conversión ADC
     
@@ -142,14 +143,7 @@ void setup(void){
     OSCCONbits.SCS = 1;
     
     //Configuración del ADC
-    ADCON1bits.ADFM = 0;                            // Resultado justificado a la izquierda
-    ADCON1bits.VCFG0 = 0;                           // Voltaje 0 de referencia = VSS
-    ADCON1bits.VCFG1 = 0;                           // Voltaje 1 de referencia = VDD
-    
-    ADCON0bits.ADCS = 0b01;                         // Conversión ADC generada a 2us
-    ADCON0bits.CHS = 0;                             // Input Channel = AN0
-    ADCON0bits.ADON = 1;                            // ADC = enabled
-    __delay_us(50);
+    config_ADC(0);
     
     //Configuración de interrupciones
     PIR1bits.ADIF = 0;                              // Limpiar bandera de interrupción del ADC
@@ -163,16 +157,16 @@ void setup(void){
     TXSTAbits.SYNC = 0;                             // Transmisión asíncrona
     TXSTAbits.BRGH = 1;                             // Baud rate a velocidad baja
     
-    BAUDCTLbits.BRG16 = 0;                          // Baud rate de 16 bits
+    BAUDCTLbits.BRG16 = 1;                          // Baud rate de 16 bits
     
-    SPBRG = 23;                                      // SPBRG:SPBRGH = 25
+    SPBRG = 23;                                     // SPBRG:SPBRGH = 25
     SPBRGH = 0;
     
-    RCSTAbits.SPEN = 1;                             // Puertos seriales habilitados
-    RCSTAbits.RX9 = 0;                              // Recepción de datos de 8 bits 
-    RCSTAbits.CREN = 1;                             // Recepción continua habilitada
+    RCSTAbits.SPEN = 1;                                 // Puertos seriales habilitados
+    RCSTAbits.RX9 = 0;                                  // Recepción de datos de 8 bits 
+    RCSTAbits.CREN = 1;                                 // Recepción continua habilitada
     
-    TXSTAbits.TXEN = 1;                             // Transmisiones habilitadas
+    TXSTAbits.TXEN = 1;                                 // Transmisiones habilitadas
     
 }
 
